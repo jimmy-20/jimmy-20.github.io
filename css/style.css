@@ -1,0 +1,261 @@
+:root{
+    --azul:#141B4D;
+    --rojo:#B31F2D;
+    --blanco:#fff;
+    --negro:#000000;
+    --fuentePrincipal:'Share';
+}
+
+*{
+    margin: 0 ;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*,*:before,*:after{
+    box-sizing: inherit;
+}
+
+body{
+    font-family: var(--fuentePrincipal) ;
+    font-size: 1.6rem;
+    line-height: 1.8;
+    margin: 0;
+    background-color: #ebebeb;
+}
+
+h1,h2,h3{
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 1rem 0 2rem 0;
+}
+
+h1{
+    font-size: 3.2rem;
+}
+
+h2{
+    font-size: 2.8rem;
+}
+
+h3{
+    font-size: 2.4rem;
+}
+
+a{
+    text-decoration: none;
+    color: var(--blanco);
+
+}
+
+img{
+    max-width: 100%;
+    display: block;
+}
+
+.header{
+    background-color: var(--azul);
+
+}
+.contenido-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: var(--blanco);
+    padding: 0 2rem;
+    height: 10rem;
+}
+
+.navegacion{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.logo{
+    height: 9rem;
+    width: 9rem;
+}
+.nav-bar{
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-bar a{
+    padding: 0 3rem;
+    font-size: 3.2rem;
+}
+
+.login{
+    display: flex;
+    justify-content: center;
+}
+
+.login a{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+}
+
+.login p {
+    font-size: 2rem;
+}
+.login img {
+    height: 9rem;
+}
+
+.carrucel{
+    background-image: url('../img/Element.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 52.3rem;
+    display: flex ;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.descripcion {
+    margin-top: 30rem;
+    font-size: 3rem;
+    color: var(--blanco);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.flecha-iz,
+.flecha-de{
+    font-size: 10rem;
+    color: var(--blanco);
+    background-color: var(--negro);
+    width: 11rem;
+    height: 11rem;
+    border-radius: 11rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circulos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circulo{
+    width: 3rem;
+    height: 3rem;
+    background-color: #141B4D;
+    border-radius: 3rem;
+    margin: 3rem;
+}
+
+.partidos  {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #ebebeb;
+    height: 20.2rem;
+    font-size: 2.4rem;
+    color: #575757;
+    gap: 0 1.5rem;
+
+}
+
+.sec-partidos{
+    display: flex;
+    flex-direction: row;
+}
+
+.card-fecha{
+    display: flex;
+    border: .1rem solid var(--negro);
+    border-top: 2rem solid var(--azul);
+    font-size: 2.3rem;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--blanco);
+    padding: 0 1.5rem;
+}
+
+
+
+.card-partido-img{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: var(--blanco);
+    padding: .5rem;
+}
+
+.card-partido-carreras{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: #343434;
+    color: var(--blanco);
+}
+
+.sect-noticias{
+   display: grid;
+   grid-template-columns: 2fr 1fr;
+   gap: 1.3rem;
+   padding-top: 2rem;
+}
+
+.noticia-act{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: url('../img/1471916005_0\ 1.png');
+    background-repeat: no-repeat;
+    height: 52.9rem;
+    padding: 2rem;
+    color: var(--blanco);
+    font-size: 3.2rem;
+}
+
+.noticia-act h2{
+    width: 60rem;
+}
+
+.noticias-titulares{
+    padding: 2rem;
+    margin-right: 1.3rem;
+    box-shadow: 10px 10px 9px 0px rgba(0,0,0,0.5);
+   background-color: var(--blanco);
+
+}
+
+.noticias-titulares h2 {
+    text-align: center;
+    color: var(--rojo);
+}
+.titulares{
+    display: grid;
+    grid-template-columns: 10% 90%;
+    
+}
+
+.viñetas .circulo{
+    margin: 0;
+}
+
+.titulares-contenido{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.mas-popular--grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+

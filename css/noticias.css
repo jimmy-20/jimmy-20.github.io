@@ -1,0 +1,349 @@
+/*Configuraciones generales*/
+
+:root{
+    --azul:#141B4D;
+    --rojo:#b31f2d;
+    --blanco:#fff;
+
+    --negro:#000000;
+    --negro-gris:#343434;
+    --gris:#575757;
+    --gris-medio-claro:#696969;
+    --gris-claro:#B0AEAE;
+
+    --fuentePrincipal:'Share';
+}
+
+*{
+    margin: 0 ;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #ebebeb;
+}
+
+h1{
+    font-size: 32px;
+    font-family: var(--fuentePrincipal);
+    font-weight: bold;
+}
+
+h2{
+    font-size: 28px;
+    font-family: var(--fuentePrincipal);
+    font-weight: bold;
+}
+
+h3{
+    font-size: 24px;
+    font-family: var(--fuentePrincipal);
+    font-weight: bold;
+}
+
+h4{
+    font-size: 20px;
+    font-family: var(--fuentePrincipal);
+    font-weight: bold;
+}
+
+input[type=text]{
+    border: 1px solid var(--gris);
+    height: 40px;
+    width: 250px;
+    padding: 12px;
+    font-family: var(--fuentePrincipal);
+    font-weight: bold;
+    font-size: 16px;
+}
+
+select{
+    border: 1px solid var(--gris);
+    height: 40px;
+    width: 250px;
+    padding: 5px;
+    font-family: var(--fuentePrincipal);
+    font-weight: bold;
+    font-size: 16px;
+    color: var(--gris);
+}
+
+select::after{
+    content: "";
+    background-image: url(../img/flecha-arriba.png);
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+}
+
+::placeholder{
+    color: var(--gris);
+}
+
+input[type=button]{
+    width: 130px;
+    height: 50px;
+    background-color: var(--azul);
+    border-radius: 20px;
+    color: var(--blanco);
+    font-family: var(--fuentePrincipal);
+    font-size: 20px;
+    padding: 0px 0px;
+    border: 0px;
+}
+
+.italic{
+    font-style: italic;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+p{
+    font-family: var(--fuentePrincipal);
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+a{
+    text-decoration: none;
+    font-family: var(--fuentePrincipal);
+}
+
+ul{
+    list-style: none;
+}
+
+li{
+    font-family: var(--fuentePrincipal);
+    font-size: 24px;
+    line-height: 1.2;
+    margin: 12px;
+}
+
+/*Inicio del estilo de la pagina*/
+
+/*Barra de navegacion*/
+.barra {
+    display: grid;
+    grid-template-columns: 1fr 0.3fr;
+    grid-template-rows: auto;
+    background-color: var(--azul);
+}
+
+.navegacion{
+    display: flex;
+    flex-direction: row;
+    align-items: center;    
+}
+
+.nav-bar a{
+    margin: 10px;
+    font-weight: bold;
+    font-size: 18px;
+    color: var(--blanco);
+}
+
+.mi-cuenta {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: right;
+}
+
+.mi-cuenta > * {
+    margin-right: 20px;
+}
+
+.login a > p{
+    padding-right: 5px;
+    color: var(--blanco);
+}
+
+.mi-cuenta {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: right;
+}
+
+.mi-cuenta > * {
+    margin-right: 20px;
+}
+
+.login a{ 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.titulo-pagina{
+    background-color: var(--negro-gris);
+    color: var(--blanco);
+    padding: 15px 30px;
+}
+/*------------------------------------------*/
+main{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.busqueda{
+    background: var(--blanco);
+    width: 350px;
+    padding: 15px;
+    height: 550px;
+    margin: 15px;
+    margin-top: 0;
+}
+
+.dato-entrada{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.container-boton{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+#btn-limpiar{
+    background-color: var(--rojo);
+}
+
+.noticias{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.paginacion{
+    display: flex;
+    gap: 10px;
+}
+
+.paginacion > div{
+    width: 35px;
+    height: 35px;
+    border: 1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--blanco);
+}
+
+.paginacion > div > a{
+    font-family: var(--fuentePrincipal);
+    font-size: 20px;
+    color: var(--negro);
+    font-weight:bold;
+}
+
+.noticias > article{
+    border: 1px solid var(--negro-gris);
+    background: var(--blanco);
+    width: 800px;
+}
+
+.noticias > article > img{
+    width: 100%;
+    height: 300px;
+    image-rendering:auto;
+    object-fit: cover;
+}
+
+
+.article-info{
+    position: relative;
+    width: 100%;
+    height: 200px;
+}
+
+.article-info > *{
+    position: absolute;
+}
+
+.article-info .fecha{
+    top: 10px;
+    left: 20px;
+}
+
+.article-info .titulo{
+    top: 50px;
+    left: 20px;
+}
+
+.article-info .compartir-en{
+    display: flex;
+    bottom: 20px;
+    right: 20px;
+    gap: 20px;
+}
+
+.article-info .ver-mas{
+    bottom: 20px;
+    left: 20px;
+    border: 3px solid var(--gris-medio-claro);
+    background-color: var(--blanco);
+    color: var(--negro-gris);
+    font-weight: bold;
+}
+
+/*Pie de pagina*/
+footer{
+    background-color: var(--azul);
+    color: var(--blanco);
+    padding-top: 35px;
+    margin-top: 20px;
+}
+
+.fo-nosotros{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px ;
+    position: relative;
+}
+
+.siguenos{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.redes-sociales{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 100px;
+}
+
+.copyright{
+    background-color: var(--negro);
+    width: auto;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.copyright > h4{
+    text-align: center;
+}
