@@ -2,8 +2,6 @@
 <html lang="en">
 
 <head>
-
-    <head>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,40 +10,51 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Share:ital,wght@0,400;0,700;1,400;1,700&display=swap"
             rel="stylesheet" />
-    </head>
+        <link rel="stylesheet" href="./css/tienda.css" />
 </head>
 
 <body>
     <nav>
-        <div>
-            <img src="./Images/Equipos/On-fire-Logo.png" width="48px" height="48px" alt="">
-            <ul>
-                <li><a href="">Noticias</a></li>
-                <li><a href="">Comunicados</a></li>
-                <li><a href="">Calendario</a></li>
-                <li><a href="">Equipos</a></li>
-                <li><a href="">Tienda</a></li>
-            </ul>
-        </div>
+        <div class="barra">
+            <div class="navegacion">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="./Images/On-fire-Logo.png" width="85px" height="64px" alt="logo" />
+                    </a>
+                </div>
 
-        <div>
-            <img src="./Icons/Carrito.png" width="48px" height="48px" alt="">
-            <div>
-                <p>Iniciar sesión</p>
-                <img src="./Images/Equipos/User.png" width="48px" height="48px" alt="">
+                <div class="nav-bar">
+                    <a href="noticias.html">Noticias</a>
+                    <a href="comunicados.html">Comunicados</a>
+                    <a href="calendario.html">Calendario</a>
+                    <a href="equipos.html">Equipos</a>
+                    <a href="tienda.html">Tienda</a>
+                </div>
+            </div>
+
+            <div class="mi-cuenta">
+                <div>
+                    <img src="./Icons/Carrito.svg" width="48px" height="48px" class="icon" />
+                </div>
+
+                <div class="login">
+                    <a href="login.hmtl">
+                        <p class="bold">Iniciar Sesión</p>
+                        <img src="./Images/User.png" width="48px" height="48px" alt="login" />
+                    </a>
+                </div>
             </div>
         </div>
     </nav>
 
-    <div>
-
-        <section>
-            <div>
+    <main>
+        <section class="busqueda">
+            <div class="dato-entrada">
                 <h3>Buscar por nombre:</h3>
-                <input type="text" name="" id="" placeholder="Buscar por nombre del equipo">
+                <input type="text" name="" id="" placeholder="Buscar por nombre del equipo" />
             </div>
 
-            <div>
+            <div class="dato-entrada">
                 <h3>Buscar por categoria:</h3>
                 <select name="" id="">
                     <option selected value="">Todas las categorias</option>
@@ -56,7 +65,7 @@
                 </select>
             </div>
 
-            <div>
+            <div class="dato-entrada">
                 <h3>Buscar por equipo:</h3>
                 <select name="" id="">
                     <option selected value="">Todos los equipos</option>
@@ -67,41 +76,41 @@
                 </select>
             </div>
 
-            <div>
+            <div class="busq-para">
                 <h3>Para:</h3>
-                <div>
-                    <input type="checkbox" name="" id="" value="">
+                <div class="checkbox">
+                    <input type="checkbox" name="" id="" value="" />
                     <label for="">Todos</label>
                 </div>
 
-                <div>
-                    <input type="checkbox" name="" id="" value="">
+                <div class="checkbox">
+                    <input type="checkbox" name="" id="" value="" />
                     <label for="">Hombres</label>
                 </div>
 
-                <div>
-                    <input type="checkbox" name="" id="" value="">
+                <div class="checkbox">
+                    <input type="checkbox" name="" id="" value="" />
                     <label for="">Mujeres</label>
                 </div>
 
-                <div>
-                    <input type="checkbox" name="" id="" value="">
+                <div class="checkbox">
+                    <input type="checkbox" name="" id="" value="" />
                     <label for="">Niños</label>
                 </div>
 
-                <div>
-                    <input type="checkbox" name="" id="" value="">
+                <div class="checkbox">
+                    <input type="checkbox" name="" id="" value="" />
                     <label for="">Bebés</label>
                 </div>
             </div>
 
-            <div>
-                <input type="button" value="Buscar">
-                <input type="button" value="Limpiar">
+            <div class="container-boton">
+                <input type="button" value="Buscar" />
+                <input type="button" id="limpiar" value="Limpiar" />
             </div>
         </section>
-        
-        <section>
+
+        <section class="sec-productos">
             <header>
                 <div class="paginacion">
                     <div><a href="">1</a></div>
@@ -110,12 +119,14 @@
                     <div><a href="">4</a></div>
                     <div><a href="">5</a></div>
                     <div><a href="">6</a></div>
-                    <div><a href=""><img src="./Icons/Right.svg" width="32px" height="32px" alt=""></a></div>
+                    <div>
+                        <a href=""><img src="./Icons/Right.svg" width="32px" height="32px" alt="" /></a>
+                    </div>
                 </div>
 
-                <div>
+                <div class="mostrar">
                     <h3>Mostrar</h3>
-                    <select name="" id="">
+                    <select name="" id="mostrar-pag">
                         <option selected value="">9</option>
                         <option value="">12</option>
                         <option value="">15</option>
@@ -123,12 +134,210 @@
                     <h3>por páginas</h3>
                 </div>
             </header>
-            <main>
-                
-            </main>
-        </section>
-    </div>
 
+            <div class="productos">
+                <div class="producto">
+                    <a href=""><img src="./Images/Productos/Gorra ajustada para hombre The Seatles.png" alt="" /></a>
+                    <div class="info-producto">
+                        <h3>Gorra ajustada para hombre The Seatles</h3>
+                        <h4>Gorras</h4>
+                        <button class="btn-añadir">
+                            Añadir al carrito
+                            <img src="./Icons/Carrito-agregar.svg" alt="" />
+                        </button>
+                    </div>
+                </div>
+
+                <div class="producto">
+                    <a href="">
+                        <img src="./Images/Productos/Gorra para hombres The Seatles Mariners new Era Royal Negro.png"
+                            alt="" />
+                    </a>
+                    <div class="info-producto">
+                        <h3>
+                            Gorra para hombres The Seatles Mariners new Era Royal Negro
+                        </h3>
+                        <h4>Gorras</h4>
+                        <button class="btn-añadir">
+                            Añadir al carrito
+                            <img src="./Icons/Carrito-agregar.svg" alt="" />
+                        </button>
+                    </div>
+                </div>
+
+                <div class="producto">
+                    <a href="">
+                        <img src="./Images/Productos/Camiseta personalizada para hombres de Seattles Mariners.png"
+                            alt="" />
+                   </a>
+                    <div class="info-producto">
+                        <h3>Camiseta personalizada para hombres de Seattles Mariners</h3>
+                        <h4>Camiseta</h4>
+                        <button class="btn-añadir">
+                            Añadir al carrito
+                            <img src="./Icons/Carrito-agregar.svg" alt="" />
+                        </button>
+                    </div>
+                </div>
+
+                <div class="producto">
+                    <a href="">
+                        <img src="./Images/Productos/Camiseta personalizada para hombres de Detroit Tigers.png"
+                            alt="" />
+                   </a>
+                    <div class="info-producto">
+                        <h3>Camiseta personalizada para hombres de Detroit Tiggers</h3>
+                        <h4>Camiseta</h4>
+                        <button class="btn-añadir">
+                            Añadir al carrito
+                            <img src="./Icons/Carrito-agregar.svg" alt="" />
+                        </button>
+                    </div>
+                </div>
+
+                <div class="producto">
+                    <a href="">
+                        <img src="./Images/Productos/Camiseta personalizada para  mujeres con cuello V de Detroit Tigers.png"
+                            alt="" />
+                   </a>
+                    <div class="info-producto">
+                        <h3>Camiseta fanático para mujeres con cuello V de Detroit Tigers</h3>
+                        <h4>Camiseta</h4>
+                        <button class="btn-añadir">
+                            Añadir al carrito
+                            <img src="./Icons/Carrito-agregar.svg" alt="" />
+                        </button>
+                    </div>
+                </div>
+
+                <div class="producto">
+                    <a href="">
+                        <img src="./Images/Productos/Correa de silicona Apple Watch con logo azul marino Detroit Tigers.png"
+                            alt="" />
+                   </a>
+                    <div class="info-producto">
+                        <h3>Correa de silicona Apple Watch con logo azul marino Detroit Tigers</h3>
+                        <h4>Camiseta</h4>
+                        <button class="btn-añadir">
+                            Añadir al carrito
+                            <img src="./Icons/Carrito-agregar.svg" alt="" />
+                        </button>
+                    </div>
+                </div>
+
+                <div class="producto">
+                    <a href="">
+                        <img src="./Images/Productos/Cartera de mujer de Detroit Tigers con triple cremallera.png"
+                            alt="" />
+                   </a>
+                    <div class="info-producto">
+                        <h3>Cartera de mujer de Detroit Tigers con triple cremallera</h3>
+                        <h4>Camiseta</h4>
+                        <button class="btn-añadir">
+                            Añadir al carrito
+                            <img src="./Icons/Carrito-agregar.svg" alt="" />
+                        </button>
+                    </div>
+                </div>
+
+                <div class="producto">
+                    <a href="">
+                        <img src="./Images/Productos/Chaqueta de forro polar reversible Diseño Real de los Angeles Dodgers para hombres.png"
+                            alt="" />
+                   </a>
+                    <div class="info-producto">
+                        <h3>Chaqueta de forro polar reversible Diseño Real de los Angeles Dodgers para hombres</h3>
+                        <h4>Camiseta</h4>
+                        <button class="btn-añadir">
+                            Añadir al carrito
+                            <img src="./Icons/Carrito-agregar.svg" alt="" />
+                        </button>
+                    </div>
+                </div>
+
+                <div class="producto">
+                    <a href="producto.html">
+                        <img src="./Images/Productos/Caja de regalo para fanatico de Los Angeles.png"
+                            alt="" />
+                   </a>
+                    <div class="info-producto">
+                        <h3>Caja de regalo para fanatico de Los Angeles</h3>
+                        <h4>Camiseta</h4>
+                        <button class="btn-añadir">
+                            Añadir al carrito
+                            <img src="./Icons/Carrito-agregar.svg" alt="" />
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="paginacion">
+                <div><a href="">1</a></div>
+                <div><a href="">2</a></div>
+                <div><a href="">3</a></div>
+                <div><a href="">4</a></div>
+                <div><a href="">5</a></div>
+                <div><a href="">6</a></div>
+                <div>
+                    <a href=""><img src="./Icons/Right.svg" width="32px" height="32px" alt="" /></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="fo-nosotros">
+            <div>
+                <ul>
+                    <li>
+                        <h3>Sobre nosotros</h3>
+                    </li>
+                    <li>
+                        <h4>¿Quienes somos?</h4>
+                    </li>
+                    <li>
+                        <h4>Misión</h4>
+                    </li>
+                    <li>
+                        <h4>Visión</h4>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="siguenos">
+                <div class="redes-sociales">
+                    <img src="./Icons/Twitter-blanco.svg" alt="" />
+                    <img src="./Icons/Facebook-blanco.svg" alt="" />
+                    <img src="./Icons/Instagram-blanco.svg" alt="" />
+                    <img src="./Icons/Youtube-blanco.svg" alt="" />
+                </div>
+
+                <h3>Siguenos en nuestras redes sociales</h3>
+            </div>
+
+            <div>
+                <ul>
+                    <li>
+                        <h3>Registrate para</h3>
+                    </li>
+                    <li>
+                        <h4>Últimas noticias</h4>
+                    </li>
+                    <li>
+                        <h4>Información relevante</h4>
+                    </li>
+                    <li>
+                        <h4>Sigue a tus ídolos</h4>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <h4>Todos los derechos reservados 2023</h4>
+            <img src="./Icons/Copyright.svg" alt="" />
+        </div>
+    </footer>
 </body>
 
 </html>

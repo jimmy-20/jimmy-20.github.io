@@ -21,7 +21,7 @@
 }
 
 body{
-    background-color: #ebebeb;
+    background-color: var(--blanco);
 }
 
 h1{
@@ -56,6 +56,11 @@ input[type=text]{
     font-family: var(--fuentePrincipal);
     font-weight: bold;
     font-size: 16px;
+}
+
+input[type=checkbox]{
+    width: 18px;
+    height: 18px;
 }
 
 select{
@@ -96,6 +101,11 @@ input[type=button]{
     border: 0px;
 }
 
+label{
+    font-family: var(--fuentePrincipal);
+    font-size: 18px;
+}
+
 .italic{
     font-style: italic;
 }
@@ -125,9 +135,8 @@ li{
     line-height: 1.2;
     margin: 12px;
 }
-/*Inicio del estilo de la pagina*/
 
-/*Barra de navegacion*/
+/*-------Barra de Navegación---------------*/
 .barra {
     display: grid;
     grid-template-columns: 1fr 0.3fr;
@@ -181,107 +190,116 @@ li{
     align-items: center;
 }
 
-.titulo-pagina{
-    background-color: var(--negro-gris);
-    color: var(--blanco);
-    padding: 15px 30px;
+.producto-id{
+    color: var(--gris);
+    border-bottom: 1px solid;
+    padding: 15px;
 }
 
-.busqueda{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 30px;
-    gap: 100px;
-}
-
-.busqueda img{
-    width: 48px;
-    height: 48px;
-    border: 1px solid;
-    border-radius: 50px;
-    padding: 10px;
-}
-
-.calendario{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
-
-.calendario input{
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    opacity: 40;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-main{
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-    justify-content: center;
-    align-items: center;
-}
-
-.resultado{
-    display: flex;
-    flex-direction: row;
-}
-
-.partido{
-    display: flex;
-    flex-direction: column;
-}
-
-.partido header{
-    width: auto;
-    height: 40px;
-}
-
-.equipo{
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    background: var(--blanco);
-    height: auto;
-    width: 600px;
-    gap: 50px;
-}
-
-.equipo > * {
-    margin-left: 30px;
-}
-
-.equipo img{
-    width: 80px;
-    height: 80px;
-    padding: 10px;
-}
-
-table{
-    background: var(--blanco);
-    border-collapse: collapse;
-}
-
-
-
-th{
-    background: var(--negro);
-    color: var(--blanco);
-    padding: 10px 20px;
-}
-
-td,th{
-    text-align: center;
+.btn-añadir{
     font-family: var(--fuentePrincipal);
+    font-size: 18px;
+    font-weight: bold;
+    background: var(--azul);
+    color: var(--blanco);
+    border: 0;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.75);
+    padding: 8px;
+    gap: 20px;
+    height: 50px;
+    width: 400px;
+    margin-top: 20px;
 }
+
+.btn-añadir img{
+    width: 32px;
+    height: 32px;
+}
+
+.producto{
+    display: flex;
+}
+
+.producto-imagen > img{
+    height: 600px;
+    width: 650px;
+}
+
+.producto-info{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+
+.producto-descripcion{
+    margin-right: 30px;
+}
+
+#producto-categoria{
+    color: var(--rojo);
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+.dato{
+    display: flex;
+    gap: 60px;
+    justify-content: start;
+    margin: 20px 0;
+    align-items: center;
+}
+
+#cmb-cantidad{
+    width: 100px;
+}
+
+.container-boton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo-otros-articulos{
+    margin: 25px;
+}
+
+.otros-articulos{
+    display: flex;
+    flex-direction: row;
+    border-top: 5px solid;
+    border-bottom: 5px solid;
+    padding: 0 30px;
+    gap: 30px;
+}
+
+.card-producto{
+    width: 300px;
+}
+.card-producto-imagen img{
+    width: 100%;
+    height: 250px;
+}
+
+.card-producto-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.card-categoria{
+    margin-top: 10px;
+}
+
+.btn-card{
+    width: 220px;
+    margin-bottom: 20px;
+}
+
 /*Pie de pagina*/
 footer{
     background-color: var(--azul);
@@ -328,4 +346,3 @@ footer{
 .copyright > h4{
     text-align: center;
 }
-
