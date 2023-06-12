@@ -1,5 +1,3 @@
-/*Configuraciones generales*/
-
 :root{
     --azul:#141B4D;
     --rojo:#b31f2d;
@@ -126,82 +124,27 @@ li{
     margin: 12px;
 }
 
-/*Inicio del estilo de la pagina*/
-
-/*Barra de navegacion*/
-.barra {
-    display: grid;
-    grid-template-columns: 1fr 0.3fr;
-    grid-template-rows: auto;
-    background-color: var(--azul);
-}
-
-.navegacion{
-    display: flex;
-    flex-direction: row;
-    align-items: center;    
-}
-
-.nav-bar a{
-    margin: 10px;
-    font-weight: bold;
-    font-size: 18px;
-    color: var(--blanco);
-}
-
-.mi-cuenta {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: right;
-}
-
-.mi-cuenta > * {
-    margin-right: 20px;
-}
-
-.login a > p{
-    padding-right: 5px;
-    color: var(--blanco);
-}
-
-.mi-cuenta {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: right;
-}
-
-.mi-cuenta > * {
-    margin-right: 20px;
-}
-
-.login a{ 
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
+/*Titulo*/
 .titulo-pagina{
     background-color: var(--negro-gris);
     color: var(--blanco);
     padding: 15px 30px;
 }
-/*------------------------------------------*/
+/*contenedor principal*/
+
+/*Seccion de busqueda*/
 main{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 30px;
     margin-top: 20px;
 }
 
 .busqueda{
     background: var(--blanco);
-    width: 350px;
+    width: 100%;
     padding: 15px;
     height: 550px;
-    margin: 15px;
-    margin-top: 0;
 }
 
 .dato-entrada{
@@ -209,6 +152,10 @@ main{
     flex-direction: column;
     gap: 10px;
     margin-bottom: 30px;
+}
+
+.dato-entrada input[type=text],.dato-entrada select{
+    width: 80%;
 }
 
 .container-boton{
@@ -223,6 +170,9 @@ main{
     background-color: var(--rojo);
 }
 
+/*Fin Seccion de busqueda*/
+
+/*Seccion noticias*/
 .noticias{
     display: flex;
     flex-direction: column;
@@ -232,16 +182,25 @@ main{
 .paginacion{
     display: flex;
     gap: 10px;
+    margin: 10px 20px;
 }
 
 .paginacion > div{
     width: 35px;
-    height: 35px;
+    height: 40px;
     border: 1px solid;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: var(--blanco);
+}
+
+.paginacion > div:nth-child(1){
     background-color: var(--azul);
+}
+
+.paginacion > div:nth-child(1) a{
+    color: var(--blanco);
 }
 
 .paginacion > div > a{
@@ -251,21 +210,17 @@ main{
     font-weight:bold;
 }
 
-.paginacion > div:nth-child(1){
-    background: var(--azul);
-}
-
 .noticias > article{
     border: 1px solid var(--negro-gris);
     background: var(--blanco);
-    width: 800px;
+    width: 100%;
 }
 
 .noticias > article > img{
     width: 100%;
-    height: 300px;
+    height: 250px;
     image-rendering:auto;
-    object-fit: cover;
+    object-fit:cover;
 }
 
 
@@ -292,8 +247,8 @@ main{
 .article-info .compartir-en{
     display: flex;
     bottom: 20px;
-    right: 20px;
-    gap: 20px;
+    right: 5px;
+    gap: 10px;
 }
 
 .article-info .ver-mas{
@@ -303,53 +258,43 @@ main{
     background-color: var(--blanco);
     color: var(--negro-gris);
     font-weight: bold;
-    width: 100px;
+    width: 116px;
     height: 50px;
 }
 
-/*Pie de pagina*/
-footer{
-    background-color: var(--azul);
-    color: var(--blanco);
-    padding-top: 35px;
-    margin-top: 20px;
+#paginacion-abajo{
+    margin-bottom: 30px;
+}
+/*Fin Seccion noticias*/
+
+@media (min-width:744px) {
+    .busqueda{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0px;
+        height: 320px;
+    }
+
+    .dato-entrada{
+        margin-bottom: 0px;
+    }
 }
 
-.fo-nosotros{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    margin: 10px ;
-    position: relative;
-}
+@media (min-width:1200px) {
+    main{
+        flex-direction: row;
+    }
 
-.siguenos{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-}
+    .busqueda{
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        height: 550px;
+    }
 
-.redes-sociales{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    gap: 100px;
-}
-
-.copyright{
-    background-color: var(--negro);
-    width: auto;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-}
-
-.copyright > h4{
-    text-align: center;
+    .article-info .compartir-en{
+        gap: 30px;
+        right: 20px;
+    }
 }

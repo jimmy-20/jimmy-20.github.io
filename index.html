@@ -1,261 +1,299 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tiro en llamas</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Share:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./css/index.css" />
-  </head>
 
-  <body>
-    <header class="header">
-      <div class="barra">
-        <div class="navegacion">
-          <a href="" class="menu-hamburguesa">
-            <img src="./Icons/menu-hamburguesa.svg" alt="">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tiro en llamas</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Share:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="css/static.css">
+</head>
+
+<body>
+  <div id="contenedor-precarga">
+    <div class="preloader" id="precarga"></div>
+    <h1 class="titulo-carga">Cargando...</h1>
+  </div>
+
+  <header class="header">
+    <nav class="nav">
+      <div class="nav__logo">
+        <a href="index.html">
+          <img src="./Images/On-fire-Logo.png" width="85px" height="64px" alt="logo" />
+        </a>
+      </div>
+
+      <input type="checkbox" name="" id="toggle">
+      <label for="toggle"><i class="material-icons">menu</i></label>
+      <div class="menu">
+        <ul>
+          <li> <a href="noticias.html">Noticias</a></li>
+          <li> <a href="comunicados.html">Comunicados</a></li>
+          <li> <a href="calendario.html">Calendario</a></li>
+          <li> <a href="equipos.html">Equipos</a></li>
+          <li> <a href="tienda.html">Tienda</a> </li>
+        </ul>
+      </div>
+       <div class="algo">
+        <a href="carrito.html" class="carrito"><img src="./Icons/Carrito.svg" width="48px" height="48px" class="icon" /></a>
+         <a href="login.hmtl" class="login">
+            <p class="bold">Iniciar Sesión</p>
+            <img src="./Images/User.png" width="48px" height="48px" alt="login" />
           </a>
-          <div class="logo">
-            <a href="index.html">
-              <img src="./Images/On-fire-Logo.png" width="85px" height="64px" alt="logo" />
-            </a>
-          </div>
+       </div>
+          
+    </nav>
+  </header>
+  <section class="carrusel">
+    <img class="flecha fl-carrusel-izquierda" src="./Icons/Flecha-izquierda.svg" alt="">
+    <div class="crl-titulo">
+      <h1>Conoce los estadios más populares en el mundo y los encuentros más esperados</h1>
+    </div>
+    <img class="flecha fl-carrusel-derecha" src="./Icons/Flecha-derecha.svg" alt="">
+    <div class="container-circulo">
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+    </div>
+  </section>
 
-          <nav class="nav-bar">
-            <a href="noticias.html">Noticias</a>
-            <a href="comunicados.html">Comunicados</a>
-            <a href="calendario.html">Calendario</a>
-            <a href="equipos.html">Equipos</a>
-            <a href="tienda.html">Tienda</a>
-          </nav>
+  <main>
+    <section class="sec-partidos">
+      <div class="partidos">
+        <div class="card-fecha">
+          <p>14 de Abril</p>
         </div>
 
-        <div class="mi-cuenta">
-          <div>
-            <img src="./Icons/Carrito.svg" width="48px" height="48px" class="icon" />
+        <div class="card-partido">
+          <div class="container-versus">
+            <img src="./Images/Equipos/Baltimore Orioles.png" width="100px" height="100px" alt="" />
+            <p>VS</p>
+            <img src="./Images/Equipos/Boston Red Sox.png" width="100px" height="100px" alt="" />
           </div>
+          <div class="container-puntaje">
+            <span>0</span>
+            <span>-</span>
+            <span>0</span>
+          </div>
+        </div>
 
-          <div class="login">
-            <a href="login.hmtl">
-              <p class="bold">Iniciar Sesión</p>
-              <img
-                src="./Images/User.png"
-                width="48px"
-                height="48px"
-                alt="login" 
-              />
-            </a>
+        <div class="card-partido">
+          <div class="container-versus">
+            <img src="./Images/Equipos/Chicago White Sox.png" width="100px" height="100px" alt="" />
+            <p>VS</p>
+            <img src="./Images/Equipos/Chicago White Sox.png" width="100px" height="100px" alt="" />
+          </div>
+          <div class="container-puntaje">
+            <span>0</span>
+            <span>-</span>
+            <span>0</span>
+          </div>
+        </div>
+
+        <div class="card-fecha">
+          <p>12 de Abril</p>
+        </div>
+
+        <div class="card-partido">
+          <div class="container-versus">
+            <img src="./Images/Equipos/Houston Astros.png" width="100px" height="100px" alt="" />
+            <p>VS</p>
+            <img src="./Images/Equipos/Los Angeles.png" width="100px" height="100px" alt="" />
+          </div>
+          <div class="container-puntaje">
+            <span>0</span>
+            <span>-</span>
+            <span>0</span>
+          </div>
+        </div>
+
+        <div class="card-partido">
+          <div class="container-versus">
+            <img src="./Images/Equipos/Baltimore Orioles.png" width="100px" height="100px" alt="" />
+            <p>VS</p>
+            <img src="./Images/Equipos/Boston Red Sox.png" width="100px" height="100px" alt="" />
+          </div>
+          <div class="container-puntaje">
+            <span>0</span>
+            <span>-</span>
+            <span>0</span>
+          </div>
+        </div>
+        
+        <div class="card-partido">
+          <div class="container-versus">
+            <img src="./Images/Equipos/Baltimore Orioles.png" width="100px" height="100px" alt="" />
+            <p>VS</p>
+            <img src="./Images/Equipos/Boston Red Sox.png" width="100px" height="100px" alt="" />
+          </div>
+          <div class="container-puntaje">
+            <span>0</span>
+            <span>-</span>
+            <span>0</span>
           </div>
         </div>
       </div>
 
-      <div class="carrusel">
-        <img class="flecha fl-carrusel-izquierda"  src="./Icons/Flecha-izquierda.svg" alt="">
-        <div class="crl-titulo">
-          <h1>Conoce los estadios más populares en el mundo y los encuentros más esperados</h1>
+      <div class="carrusel-partidos">
+        <div class="container-mover">
+          <img class="flecha flecha-partidos" src="./Icons/fl-izquierda-gris.svg" width="64px" height="64px" alt="">
+          <img class="flecha flecha-partidos" src="./Icons/fl-derecha-gris.svg" width="64px" height="64px" alt="">
         </div>
-        <img class="flecha fl-carrusel-derecha" src="./Icons/Flecha-derecha.svg" alt="">
-        <div class="container-circulo">
-          <div class="circle"></div>
-          <div class="circle"></div>
-          <div class="circle"></div>
-          <div class="circle"></div>  
-        </div>
+        <input class="boton btn-navegar" type="button" value="Calendario" />
       </div>
-      
-    </header>
-
-    <main>
-      <section class="sec-partidos">
-        <div class="partidos">
-          <div class="card-fecha">
-            <p>14 de Abril</p>
-          </div>
-
-          <div class="card-partido">
-            <div class="container-versus">
-              <img src="./Images/Equipos/Baltimore Orioles.png" width="100px" height="100px" alt="" />
-              <p>VS</p>
-              <img src="./Images/Equipos/Boston Red Sox.png" width="100px" height="100px" alt="" />
-            </div>
-            <div class="container-puntaje">
-              <span>0</span>
-              <span>-</span>
-              <span>0</span>
-            </div>
-          </div>
-
-          <div class="card-partido">
-            <div class="container-versus">
-              <img src="./Images/Equipos/Chicago White Sox.png" width="100px" height="100px" alt="" />
-              <p>VS</p>
-              <img src="./Images/Equipos/Chicago White Sox.png" width="100px" height="100px"  alt="" />
-            </div>
-            <div class="container-puntaje">
-              <span>0</span>
-              <span>-</span>
-              <span>0</span>
-            </div>
-          </div>
-
-          <div class="card-fecha">
-            <p>12 de Abril</p>
-          </div>
-
-          <div class="card-partido">
-            <div class="container-versus">
-              <img src="./Images/Equipos/Houston Astros.png" width="100px" height="100px"  alt="" />
-              <p>VS</p>
-              <img src="./Images/Equipos/Los Angeles.png" width="100px" height="100px"  alt="" />
-            </div>
-            <div class="container-puntaje">
-              <span>0</span>
-              <span>-</span>
-              <span>0</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="carrusel-partidos">
-          <div class="container-mover">
-            <img class="flecha flecha-partidos" src="./Icons/fl-izquierda-gris.svg" width="64px" height="64px" alt="">
-            <img class="flecha flecha-partidos" src="./Icons/fl-derecha-gris.svg" width="64px" height="64px" alt="">
-          </div>
-          <input class="boton btn-navegar" type="button" value="Calendario" />
-        </div>
-      </section>
-
-      <section class="sect-noticias">
-        <section class="noticia-act">
-          <div class="noticia-act--tag">
-            <img src="./Images/Tag.png" alt="" />
-          </div>
-          <div class="titular-imagen">
-            <h2>Carlotes Fuentes retira a Carlos Correa con una buena atrapadada</h2>
-          </div>
-        </section>
-
-        <section class="noticias-titulares">
-          <h2>Titulares</h2>
-          <div class="titulares">
-            <div>
-              <div class="circulo"></div>
-              <h3>Carlotes Fuentes retira a Carlos Correa con una buena atrapadada</h3>
-            </div>
-
-            <div>
-              <div class="circulo"></div>
-              <h3>Todo lo que debes saber sobre el regreso de Fernando Tatis Jr.</h3>
-            </div>
-
-            <div>
-              <div class="circulo"></div>
-              <h3>Atleticos adquieren terreno en Las Vegas para su nuevo estadio</h3>
-            </div>
-
-            <div>
-              <div class="circulo"></div>
-              <h3>Los Yankess batallan con las inconsistencias en su alineación</h3>
-            </div>
-
-            <div>
-              <div class="circulo"></div>
-              <h3>Max Scherzer es expulsado tras ser revisado por los umpires</h3>
-            </div>
-            
-          </div>
-        </section>
-      </section>
-
-      <h2 class="titulo-popular">Lo más hablado del momento 🔥</h2>
-
-      <section class="sec-popular">
-          <div class="jugador-popular">
-            <img class="flecha flecha-jugador-izquierda" id="" src="./Icons/Flecha-izquierda.svg" alt="">
-          </div>
-          <div class="info-jugador">
-            <h2>Raul Cajallena</h2>
-            <h3>Bateador</h3>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing
-            </p>
-            <img class="flecha flecha-jugador-derecha" src="./Icons/Flecha-derecha.svg" alt="">
-            <img class="equipo-logo" src="./Images/Equipos/Los Angeles.png" width="64px" height="80px" alt="">
-          </div>
-      </section>
-    </main>
-
-    <h2 class="titulo-sec-equipos">Conoce más de cerca a tus equipos preferidos</h2>
-    <section class="sec-equipos">
-      <div>
-        <img src="./Images/Equipos/Houston Astros Grande.png" width="200px" height="200x" alt="">
-        <h2>Houston Astros</h2>
-        <input class="boton-link" type="button" value="Ver más">
-      </div>
-
-      <div>
-        <img src="./Images/Equipos/Los Angeles Grande.png" width="200px" height="200x" alt="">
-        <h2>Los Angeles</h2>
-        <input class="boton-link" type="button" value="Ver más">
-      </div>
-
-      <div>
-        <img src="./Images/Equipos/Detroid Tigers Grande.png" width="150px" height="200x" alt="">
-        <h2>Detroid Tigers</h2>
-        <input class="boton-link" type="button" value="Ver más">
-      </div>
-
     </section>
 
-    <footer>
-      <div class="fo-nosotros">
-        <div>
-          <ul>
-            <li><h3>Sobre nosotros</h3></li>
-            <li><h4>¿Quienes somos?</h4></li>
-            <li><h4>Misión</h4></li>
-            <li><h4>Visión</h4></li>
-          </ul>
+    <section class="sect-noticias">
+      <section class="noticia-act">
+        <div class="noticia-act--tag">
+          <img src="./Images/Tag.png" alt="" />
         </div>
+        <div class="titular-imagen">
+          <h2>Carlotes Fuentes retira a Carlos Correa con una buena atrapadada</h2>
+        </div>
+      </section>
 
-        <div class="siguenos">
-          <div class="redes-sociales">
-            <img src="./Icons/Twitter-blanco.svg" alt="" />
-            <img src="./Icons/Facebook-blanco.svg" alt="" />
-            <img src="./Icons/Instagram-blanco.svg" alt="" />
-            <img src="./Icons/Youtube-blanco.svg" alt="" />
+      <section class="noticias-titulares">
+        <h2>Titulares</h2>
+        <div class="titulares">
+          <div>
+            <div class="circulo"></div>
+            <h3>Carlotes Fuentes retira a Carlos Correa con una buena atrapadada</h3>
           </div>
 
-          <h3>Siguenos en nuestras redes sociales</h3>
+          <div>
+            <div class="circulo"></div>
+            <h3>Todo lo que debes saber sobre el regreso de Fernando Tatis Jr.</h3>
+          </div>
+
+          <div>
+            <div class="circulo"></div>
+            <h3>Atleticos adquieren terreno en Las Vegas para su nuevo estadio</h3>
+          </div>
+
+          <div>
+            <div class="circulo"></div>
+            <h3>Los Yankess batallan con las inconsistencias en su alineación</h3>
+          </div>
+
+          <div>
+            <div class="circulo"></div>
+            <h3>Max Scherzer es expulsado tras ser revisado por los umpires</h3>
+          </div>
+
+        </div>
+      </section>
+    </section>
+
+    <h2 class="titulo-popular">Lo más hablado del momento 🔥</h2>
+
+    <section class="sec-popular">
+      <div class="jugador-popular">
+        <img class="flecha flecha-jugador-izquierda" id="" src="./Icons/Flecha-izquierda.svg" alt="">
+      </div>
+      <div class="info-jugador">
+        <h2>Raul Cajallena</h2>
+        <h3>Bateador</h3>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text
+          ever since the 1500s, when an unknown printer took a galley of
+          type and scrambled it to make a type specimen book. It has
+          survived not only five centuries, but also the leap into
+          electronic typesetting, remaining essentially unchanged. It was
+          popularised in the 1960s with the release of Letraset sheets
+          containing
+        </p>
+        <img class="flecha flecha-jugador-derecha" src="./Icons/Flecha-derecha.svg" alt="">
+        <img class="equipo-logo" src="./Images/Equipos/Los Angeles.png" width="64px" height="80px" alt="">
+      </div>
+    </section>
+  </main>
+
+  <h2 class="titulo-sec-equipos">Conoce más de cerca a tus equipos preferidos</h2>
+  <section class="sec-equipos">
+    <div>
+      <img src="./Images/Equipos/Houston Astros Grande.png" width="200px" height="200x" alt="">
+      <h2>Houston Astros</h2>
+      <input class="boton-link" type="button" value="Ver más">
+    </div>
+
+    <div>
+      <img src="./Images/Equipos/Los Angeles Grande.png" width="200px" height="200x" alt="">
+      <h2>Los Angeles</h2>
+      <input class="boton-link" type="button" value="Ver más">
+    </div>
+
+    <div>
+      <img src="./Images/Equipos/Detroid Tigers Grande.png" width="150px" height="200x" alt="">
+      <h2>Detroid Tigers</h2>
+      <input class="boton-link" type="button" value="Ver más">
+    </div>
+
+  </section>
+
+  <footer>
+    <div class="fo-nosotros">
+      <div>
+        <ul>
+          <li>
+            <h3>Sobre nosotros</h3>
+          </li>
+          <li>
+            <h4>¿Quienes somos?</h4>
+          </li>
+          <li>
+            <h4>Misión</h4>
+          </li>
+          <li>
+            <h4>Visión</h4>
+          </li>
+        </ul>
+      </div>
+
+      <div class="siguenos">
+        <div class="redes-sociales">
+          <img src="./Icons/Twitter-blanco.svg" alt="" />
+          <img src="./Icons/Facebook-blanco.svg" alt="" />
+          <img src="./Icons/Instagram-blanco.svg" alt="" />
+          <img src="./Icons/Youtube-blanco.svg" alt="" />
         </div>
 
-        <div>
-          <ul>
-            <li><h3>Registrate para</h3></li>
-            <li><h4>Últimas noticias</h4></li>
-            <li><h4>Información relevante</h4></li>
-            <li><h4>Sigue a tus ídolos</h4></li>
-          </ul>
-        </div>
+        <h3>Siguenos en nuestras redes sociales</h3>
       </div>
-      
-      <div class="copyright">
-        <h4>Todos los derechos reservados 2023</h4>
-        <img src="./Icons/Copyright.svg" alt="">
+
+      <div>
+        <ul>
+          <li>
+            <h3>Registrate para</h3>
+          </li>
+          <li>
+            <h4>Últimas noticias</h4>
+          </li>
+          <li>
+            <h4>Información relevante</h4>
+          </li>
+          <li>
+            <h4>Sigue a tus ídolos</h4>
+          </li>
+        </ul>
       </div>
-    </footer>
-  </body>
+    </div>
+
+    <div class="copyright">
+      <h4>Todos los derechos reservados 2023</h4>
+      <img src="./Icons/Copyright.svg" alt="">
+    </div>
+  </footer>
+
+  <script src="javascript/precarga.js"></script>
+  <script src="javascript/index.js"></script>
+</body>
+
 </html>

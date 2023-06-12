@@ -10,45 +10,38 @@
           href="https://fonts.googleapis.com/css2?family=Share:ital,wght@0,400;0,700;1,400;1,700&display=swap"
           rel="stylesheet"
         />
-        <link rel="stylesheet" href="css/noticias.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="css/static.css">
+        <link rel="stylesheet" href="css/noticias2.css">
     </head>
     <body>
-        <nav>
-            <div class="barra">
-                <div class="navegacion">
-                  <div class="logo">
-                    <a href="index.html">
-                      <img src="./Images/On-fire-Logo.png" width="85px" height="64px" alt="logo" />
-                    </a>
-                  </div>
-        
-                  <div class="nav-bar">
-                    <a href="noticias.html">Noticias</a>
-                    <a href="comunicados.html">Comunicados</a>
-                    <a href="calendario.html">Calendario</a>
-                    <a href="equipos.html">Equipos</a>
-                    <a href="tienda.html">Tienda</a>
-                  </div>
-                </div>
-        
-                <div class="mi-cuenta">
-                  <div>
-                    <img src="./Icons/Carrito.svg" width="48px" height="48px" class="icon" />
-                  </div>
-        
-                  <div class="login">
-                    <a href="login.hmtl">
-                      <p class="bold">Iniciar Sesión</p>
-                      <img
-                        src="./Images/User.png"
-                        width="48px"
-                        height="48px"
-                        alt="login"/>
-                    </a>
-                  </div>
-                </div>
-              </div>
-        </nav>
+      <nav class="nav">
+        <div class="nav__logo">
+          <a href="index.html">
+            <img src="./Images/On-fire-Logo.png" width="85px" height="64px" alt="logo" />
+          </a>
+        </div>
+  
+        <input type="checkbox" name="" id="toggle">
+        <label for="toggle"><i class="material-icons">menu</i></label>
+        <div class="menu">
+          <ul>
+            <li> <a href="noticias.html">Noticias</a></li>
+            <li> <a href="comunicados.html">Comunicados</a></li>
+            <li> <a href="calendario.html">Calendario</a></li>
+            <li> <a href="equipos.html">Equipos</a></li>
+            <li> <a href="tienda.html">Tienda</a> </li>
+          </ul>
+        </div>
+         <div class="algo">
+          <a href="carrito.html" class="carrito"><img src="./Icons/Carrito.svg" width="48px" height="48px" class="icon" /></a>
+           <a href="login.hmtl" class="login">
+              <p class="bold">Iniciar Sesión</p>
+              <img src="./Images/User.png" width="48px" height="48px" alt="login" />
+            </a>
+         </div>
+            
+      </nav>
 
         <header class="titulo-pagina">
             <h1>Descubre lo que ocurre en el baseball</h1>
@@ -57,19 +50,19 @@
         <main>
             <section class="busqueda">
                 <div class="dato-entrada">
-                   <h3>Busqueda por palabra clave</h3>
+                   <h3>Búsqueda por palabra clave</h3>
                    <input type="text" placeholder="Buscar por palabra clave">
                 </div>
                 
                 <div class="dato-entrada">
-                    <h3>Categoria</h3>
+                    <h3>Categoría</h3>
                     <select name="" id="">
-                        <option value="" selected>Todas las categorias</option>
+                        <option value="" selected>Todas las categorías</option>
                         <option value="">Jugadores</option>
                         <option value="">Partidos</option>
                         <option value="">Jugadas</option>
                         <option value="">Anuncios</option>
-                        <option value="">Practicas</option>
+                        <option value="">Prácticas</option>
                         <option value="">Opiniones</option>
                     </select>
                 </div>
@@ -124,11 +117,11 @@
                 <article>
                     <img src="./Images/Titular 1 Foto.png" alt="">
                     <div class="article-info">
-                        <h3 class="fecha">12/04/2023</h3>
-                        <h3 class="titulo">Carlotes Fuentes retira a Dennis Correa con una buena atrapada</h3>
+                        <h4 class="fecha italic">12/04/2023</h4>
+                        <h4 class="titulo">Carlotes Fuentes retira a Dennis Correa con una buena atrapada</h4>
                         <input class="ver-mas" type="button" value="Ver más">
                         <div class="compartir-en">
-                            <h3>Compartir:</h3>
+                            <h4>Compartir:</h4>
                             <a href=""><img src="./Icons/Facebook.svg" width="32px" height="32px" alt=""></a>
                             <a href=""><img src="./Icons/Twitter.svg" width="32px" height="32px" alt=""></a>
                             <a href=""><img src="./Icons/Instagram.svg" width="32px" height="32px" alt=""></a>
@@ -139,11 +132,11 @@
                 <article>
                     <img src="./Images/Noticia 2.png" alt="">
                     <div class="article-info">
-                        <h3 class="fecha">12/04/2023</h3>
-                        <h3 class="titulo">Julio Rodríguez abandona el juego tras aparente lesión de espalda</h3>
+                        <h4 class="fecha italic">12/04/2023</h4>
+                        <h4 class="titulo">Julio Rodríguez abandona el juego tras aparente lesión de espalda</h4>
                         <input class="ver-mas" type="button" value="Ver más">
                         <div class="compartir-en">
-                            <h3>Compartir:</h3>
+                            <h4>Compartir:</h4>
                             <a href=""><img src="./Icons/Facebook.svg" width="32px" height="32px" alt=""></a>
                             <a href=""><img src="./Icons/Twitter.svg" width="32px" height="32px" alt=""></a>
                             <a href=""><img src="./Icons/Instagram.svg" width="32px" height="32px" alt=""></a>
@@ -154,11 +147,11 @@
                 <article>
                     <img src="./Images/Noticia 3.png" height="300px" width="300px" alt="">
                     <div class="article-info">
-                        <h3 class="fecha">12/04/2023</h3>
-                        <h3 class="titulo">Javy Guerra regresa a los Rays tras un cambio con los Cerveceros</h3>
+                        <h4 class="fecha italic">12/04/2023</h4>
+                        <h4 class="titulo">Javy Guerra regresa a los Rays tras un cambio con los Cerveceros</h4>
                         <input class="ver-mas" type="button" value="Ver más">
                         <div class="compartir-en">
-                            <h3>Compartir:</h3>
+                            <h4>Compartir:</h4>
                             <a href=""><img src="./Icons/Facebook.svg" width="32px" height="32px" alt=""></a>
                             <a href=""><img src="./Icons/Twitter.svg" width="32px" height="32px" alt=""></a>
                             <a href=""><img src="./Icons/Instagram.svg" width="32px" height="32px" alt=""></a>
@@ -166,7 +159,7 @@
                     </div>
                 </article>
 
-                <div class="paginacion">
+                <div class="paginacion" id="paginacion-abajo">
                     <div><a href="">1</a></div>
                     <div><a href="">2</a></div>
                     <div><a href="">3</a></div>
