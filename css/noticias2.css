@@ -278,6 +278,12 @@ main{
     .dato-entrada{
         margin-bottom: 0px;
     }
+
+    .container-boton{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        
+    }
 }
 
 @media (min-width:1200px) {

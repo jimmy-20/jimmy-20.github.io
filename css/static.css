@@ -67,12 +67,13 @@ nav ul {
   order: 2;
 }
 
-nav a {
+nav a,.fo-nosotros a{
   text-decoration: none;
   color: white;
   font-family: var(--fuentePrincipal);
   font-weight: bold;
 }
+
 
 nav #toggle,
 nav label {
