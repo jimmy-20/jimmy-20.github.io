@@ -4,7 +4,7 @@ let usuario =  formLogin.querySelector('.user-name');
 let contraseña = formLogin.querySelector('.passwordLogin');
 
 if (usuario.value == 'admin' && contraseña.value == 'password'){
-    window.location.href = "admin/home.html";
+    window.location.href = "./admin/home.html";
 }else if (usuario.value == 'usuario' &&  contraseña.value== 'password'){
     localStorage.setItem('usuario',true);
     alert('Bienvenido de nuevo');
