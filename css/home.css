@@ -1,0 +1,130 @@
+@import url(style.css);
+
+header{
+    margin: 30px;
+}
+
+
+.container-resumen{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin: 20px;
+}
+
+.card-resumen{
+    background-color: var(--blanco);
+    width: 100%;
+    height: 120px;
+}
+
+.container-numero-card{
+    height: 90px;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-titulo-card{
+    width: 100%;
+    height: 30px;
+    background-color: var(--rojo);
+    color: var(--blanco);
+    text-align: center;
+}
+
+@media (min-width:744px){
+    .container-resumen {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width:1000px) {
+    .container-resumen{
+        grid-template-columns: 1fr 1fr 1fr;
+    }    
+}
+
+#resumen-grafico{
+    width: 100%;
+    height: 500px;
+}
+
+.titulo-grafica{
+    background-color: var(--blanco);
+    padding: 15px;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-top: 50px;
+}
+
+.chart {
+    height: 300px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    position: relative;
+    margin: 20px;
+    background-color: var(--blanco);
+  }
+
+  .bar {
+    display: inline-block;
+    width: 40px;
+    margin-right: 20%;
+    background-color: #f00;
+    position: absolute;
+    bottom: 0;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .bar2 {
+    display: inline-block;
+    width: 40px;
+    margin-left: 20%;
+    background-color: var(--azul);
+    position: absolute;
+    bottom: 0;
+    transition: all 0.7s ease-in-out;
+  }
+  .bar3 {
+    display: inline-block;
+    width: 40px;
+    margin-left: 40%;
+    background-color: #0f0;
+    position: absolute;
+    bottom: 0;
+    transition: all 0.9s ease-in-out;
+
+  }
+  .bar4 {
+    display: inline-block;
+    width: 40px;
+    margin-left: 60%;
+    background-color: #ff0;
+    position: absolute;
+    bottom: 0;
+    transition: all 1s ease-in-out;
+  }
+  .bar5 {
+    display: inline-block;
+    width: 40px;
+    margin-left: 80%;
+    background-color: #f90;
+    position: absolute;
+    bottom: 0;
+    transition: all 1.1s ease-in-out;
+  }
+
+  .grid-line {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    border-bottom: 1px dashed #ccc;
+  }
+  .label {
+    position: absolute;
+    bottom: -20px;
+    text-align: center;
+    font-family: var(--fuentePrincipal);
+  }

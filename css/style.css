@@ -1,46 +1,81 @@
-/*Pie de pagina*/
-footer{
-    background-color: var(--azul);
-    color: var(--blanco);
-    padding-top: 35px;
-    margin-top: 20px;
+:root {
+  --azul: #141b4d;
+  --rojo: #b31f2d;
+  --blanco: #fff;
+
+  --negro: #000000;
+  --negro-gris: #343434;
+  --gris: #575757;
+  --gris-medio-claro: #696969;
+  --gris-claro: #b0aeae;
+
+  --fuentePrincipal: "Share";
 }
 
-.fo-nosotros{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    margin: 10px ;
-    position: relative;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.siguenos{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
+body {
+  background-color: #ebebeb;
 }
 
-.redes-sociales{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    gap: 100px;
+h1 {
+  font-size: 32px;
+  font-family: var(--fuentePrincipal);
+  font-weight: bold;
 }
 
-.copyright{
-    background-color: var(--negro);
-    width: auto;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
+h2 {
+  font-size: 28px;
+  font-family: var(--fuentePrincipal);
+  font-weight: bold;
 }
 
-.copyright > h4{
-    text-align: center;
+h3 {
+  font-size: 24px;
+  font-family: var(--fuentePrincipal);
+  font-weight: bold;
 }
+
+h4 {
+  font-size: 20px;
+  font-family: var(--fuentePrincipal);
+  font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+p {
+  font-family: var(--fuentePrincipal);
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+a {
+  text-decoration: none;
+  font-family: var(--fuentePrincipal);
+  color: var(--negro);
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  font-family: var(--fuentePrincipal);
+  font-size: 24px;
+  line-height: 1.2;
+  padding: 12px;
+}
+
+  

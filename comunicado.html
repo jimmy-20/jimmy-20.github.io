@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Comunicado</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Share:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/static.css">
+    <link rel="stylesheet" href="./css/componentes.css">
+    <link rel="stylesheet" href="./css/comunicado.css">
+</head>
+<body>
+    <div id="contenedor-precarga">
+        <div class="preloader" id="precarga"></div>
+        <h1 class="titulo-carga">Cargando...</h1>
+    </div>
+    
+      <header class="header">
+        <nav class="nav">
+          <div class="nav__logo">
+            <a href="index.html">
+              <img src="./Images/On-fire-Logo.png" width="85px" height="64px" alt="logo" />
+            </a>
+          </div>
+    
+          <input type="checkbox" name="" id="toggle">
+          <label for="toggle" class="toggle"><i class="fa-solid fa-bars"></i></label>
+          <div class="menu">
+            <ul>
+              <li> <a href="noticias.html">Noticias</a></li>
+              <li> <a href="comunicados.html">Comunicados</a></li>
+              <li> <a href="calendario.html">Calendario</a></li>
+              <li> <a href="equipos.html">Equipos</a></li>
+              <li> <a href="tienda.html">Tienda</a> </li>
+            </ul>
+          </div>
+          <div class="algo">
+            <a href="carrito.html" class="carrito"><img src="./Icons/Carrito.svg" width="48px" height="48px"
+                class="icon" /></a>
+            <a href="#" class="login" id="login">
+              <p class="bold">Iniciar Sesión</p>
+              <img src="./Images/User.png" width="48px" height="48px" alt="login" />
+            </a>
+            <div class="mi-cuenta" id="mi-cuenta">
+              <div class="menu-item">
+                <input type="checkbox" id="toggle-menu" class="toggle-menu">
+                <label for="toggle-menu" class="menu-title bold"><img src="./Images/User.png" width="48px" height="48px" alt="login" /> <p>Mi Cuenta</p>
+                </label>
+                <div class="submenu">
+                  <a href="cuenta.html">Gestionar Cuenta</a>
+                  <a href="pedidos.html">Mis pedidos</a>
+                  <a href="#" onclick="localStorage.clear();window.location.reload;">Salir</a>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+        </nav>
+      </header>
+    
+      <!-- Login -->
+      <div class="popup">
+        <div class="wrapper">
+          <span class="icon-close"><i class="fa-solid fa-xmark"></i></span>
+          <div class="form-box login2">
+            
+            <i class="fa-solid fa-circle-user"></i>
+            <h3>Inicio Sesión</h3>
+    
+            <form action="#" id="loginForm" class="login-form">
+              <div class="input-box">
+                <input class="user-name" type="text" placeholder="Ingrese su usuario" required>
+                <label>Usuario</label>
+              </div>
+    
+              <div class="input-box">
+                <input class="passwordLogin" type="password" placeholder="******" required>
+                <label>Contraseña</label>
+              </div>
+    
+                        <button type="submit" id="btn-login" class="btn">Entrar</button>
+
+    
+              <div class="inicio-google">
+                <p>O</p>
+                <P>Inicia con</P>
+                <a href="#"> <i class="fa-brands fa-google"></i> Google</a>
+              </div>
+              <div class="login-register">
+                <p class="login-register-p"> ¿Aún no tienes una cuenta ? <a href="#form-box register" class="register-link">Registrate!</a></p>
+              </div>
+            </form>
+          </div>
+    
+          <div class="form-box register">
+            <h3>Registro</h3>
+    
+            <div class="profile-image">
+              <i class="fa-solid fa-circle-user"></i>
+              <img id="profileImage" src="#" alt="Foto de perfil" style="width: 150px; 
+                    height: 150px; 
+                    border-radius: 50%;
+                    display: none;">
+              <button id="profileImageButton" class="profile-image-button" onclick="openCameraModal()"><i
+                  class="fa-sharp fa-solid fa-camera-retro"></i></button>
+            </div>
+    
+    
+            <form action="#" id="registerForm" class="resgister-form">
+    
+    
+              <div class="input-box">
+                <input type="email" class="email" required>
+                <label>Ingrese su correo electrónico:</label>
+              </div>
+    
+              <div class="input-box">
+                <input type="text" class="userName" required>
+                <label> Ingrese su nombre de usuario</label>
+              </div>
+    
+              <div class="input-box">
+                <input type="password" class="password" id="password" required>
+                <label>Ingrese una contraseña:</label>
+              </div>
+    
+              <div class="input-box">
+                <input type="password" class="confirmPassword" id="confirmPassword" required>
+                <label>Ingrese de nuevo la contraseña:</label>
+              </div>
+    
+              <div id="message" class="message"></div>
+    
+              <div class="remember-forgot" required>
+                <label>
+                  Al crear una cuenta en nuestro sitio,
+                  estás aceptando nuestros términos de uso y políticas de privacidad.
+                </label>
+              </div>
+              <button type="submit" class="btn">Crear una cuenta nueva</button>
+    
+              <div class="login-register">
+                <p>¿Ya tienes una cuenta? <a href="#form-box login" class="login-link">Inicie sesión aquí</a></p>
+              </div>
+            </form>
+          </div>
+        </div>
+    
+        <div id="cameraModal" class="modal">
+          <div class="modal-content">
+            <video id="cameraVideo" width="400" height="300" autoplay></video>
+            <button class="btn-submit" onclick="capturePhoto()">Capturar foto</button>
+          </div>
+        </div>
+      </div>
+
+      <header class="cabecera">
+        <div class="info">
+        <h1>Bravos ganan 9np juego seguido en noche histórica de Acuña Jr</h1>
+        <p>CLEVELAND -- Michael Harris bateó par de cuadrangulares y Bryce Elder, uno de los ocho jugadores de Atlanta que van al Juego de Estrellas, lanzó seis entradas y dos tercios para liderar a los Bravos a su novena victoria consecutiva, al vencer 4-2 a los Guardianes de Cleveland el lunes</p>
+
+        <div class="autor">
+          <h3>Escrito por:</h3>
+          <h3>Jefferson Thomas Hendrickson</h3>
+        </div>
+        </div>
+        
+        <div class="container-img-Titular"><img src="./Images/Noticia info 1.png" alt=""/> <p class="bold">Foto tomada por Michael Steven</p></div>
+      </header>
+
+      <main>
+        <section class="noticia">
+          <p>Harris conectó cuadrangulares solitarios en la tercera y la quinta entradas en contra del novato de los Guardianes Gavin Williams (0-1), quien en la tercera apertura de su carrera tuvo que enfrentar a una alineación con seis All-Stars y sin una debilidad evidente.</p>
+          <p>Harris puede ser el noveno bateador de Atlanta, pero produce con números de .416 (37 de 89) con siete cuadrangulares y 16 carreras producidas en los últimos 24 partidos.</p>
+          <p>El dominicano Marcell Ozuna también dio cuadrangular por los Bravos, que han ganado 17 de 18 y 24 de 27.</p>
+          <p>Atlanta, que ha tenido tres rachas ganadoras de al menos ocho partidos, mejoró su marca en las Grandes Ligas, la mejor del año, a 57-27.</p>
+          <h3>Box Score</h3>
+          <p>Por los Bravos, el venezolano Orlando Arcia de 3-1, Ronald Acuña Jr. de 4-1, una anotada. El dominicano Marcell Ozuna de 4-1, una anotada y una producida.</p>
+          <p>Por los Guardianes, el dominicano Amed Rosario de 5-2, dos impulsadas. El venezolano Andrés Giménez de 4-1, Gabriel Arias de 1-0.</p>
+          <div class="container-video-noticia">
+              <video controls autoplay muted src="https://video.fmga4-1.fna.fbcdn.net/v/t42.1790-2/358167915_3215633402060472_3634578246306081702_n.mp4?_nc_cat=103&ccb=1-7&_nc_sid=985c63&efg=eyJ2ZW5jb2RlX3RhZyI6InN2ZV9zZCJ9&_nc_ohc=1zIC0T7PuCsAX9I2gvQ&_nc_rml=0&_nc_ht=video.fmga4-1.fna&oh=00_AfD9Im6cdEojOfoOqfVt3jy3TUqSGP2qP1bv1Zo_BjnTbQ&oe=64A9A099"></video>
+          </div>
+        </section>
+  
+        <section class="sect-recomendado">
+          <div class="titulo-recomendado">
+              <h3>Lectura recomendada</h3>
+          </div>
+  
+          <article class="noticia-recomendado">
+              <div class="container-img-recomendado"><img src="./Images/Noticia Recomendada 1.png" alt=""></div>
+              <a href="#">
+                <h4>Bravos le caen a Eury Pérez en victoria contundente sobre Marlins</h4>
+              </a>
+          </article>
+  
+          <article class="noticia-recomendado">
+              <div class="container-img-recomendado"><img src="./Images/Noticia Recomendada 2.png" alt=""></div>
+              <a href="#">
+                <h4>¡16 Carreras! Bravos frenan en seco a Marlins a fuerza de batazos</h4>
+              </a>
+          </article>
+
+          <article class="noticia-recomendado">
+            <div class="container-img-recomendado"><img src="./Images/Noticia Recomendada 2.png" alt=""></div>
+            <a href="#">
+              <h4>¡16 Carreras! Bravos frenan en seco a Marlins a fuerza de batazos</h4>
+            </a>
+        </article>
+
+        <article class="noticia-recomendado">
+          <div class="container-img-recomendado"><img src="./Images/Noticia Recomendada 2.png" alt=""></div>
+          <a href="#">
+            <h4>¡16 Carreras! Bravos frenan en seco a Marlins a fuerza de batazos</h4>
+          </a>
+      </article>
+        </section>
+      </main>
+      
+
+      <section class="sect-comentarios">
+        <h3>Comentarios</h3>
+        <ul class="lista-comentarios">
+          <li>
+            <div class="avatar"><img src="./Images/avatar.jpg" alt=""></div>
+            <div class="descripcion">
+              <div class="coment-cabecera">
+                <h4>Lánzado Jaconbo</h4>
+                <h5>20 minutos</h5>
+                <i class="fa fa-reply"></i>
+                <i class="fa fa-heart"></i>
+              </div>
+              <div class="comentario-contenido">
+                <p>Una excelente estrella del partido! 😊</p>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="avatar"><img src="./Images/avatar.jpg" alt=""></div>
+            <div class="descripcion">
+              <div class="coment-cabecera">
+                <h4>Lánzado Jaconbo</h4>
+                <h5>20 minutos</h5>
+                <i class="fa fa-reply"></i>
+                <i class="fa fa-heart"></i>
+              </div>
+              <div class="comentario-contenido">
+                <p>Una excelente estrella del partido! 😊</p>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="avatar" id="mi-usuario"><i class="fa fa-user"></i></div>
+            <div class="descripcion">
+              <input type="text" name="" id="mi-comentario" placeholder="Escribe un comentario">
+              <input type="button" id="btn-comentar" value="Comentar">
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <footer>
+        <div class="fo-nosotros">
+          <div>
+            <ul>
+              <a href="sobrenosotros.html">
+                <li>
+                  <h3>Sobre nosotros</h3>
+                </li>
+                <li>
+                  <h4>¿Quienes somos?</h4>
+                </li>
+                <li>
+                  <h4>Misión</h4>
+                </li>
+                <li>
+                  <h4>Visión</h4>
+                </li>
+              </a>
+            </ul>
+          </div>
+    
+          <div class="siguenos">
+            <div class="redes-sociales">
+              <img src="./Icons/Twitter-blanco.svg" alt="" />
+              <img src="./Icons/Facebook-blanco.svg" alt="" />
+              <img src="./Icons/Instagram-blanco.svg" alt="" />
+              <img src="./Icons/Youtube-blanco.svg" alt="" />
+            </div>
+    
+            <h3>Siguenos en nuestras redes sociales</h3>
+          </div>
+    
+          <div>
+            <ul>
+              <li>
+                <h3>Registrate para</h3>
+              </li>
+              <li>
+                <h4>Últimas noticias</h4>
+              </li>
+              <li>
+                <h4>Información relevante</h4>
+              </li>
+              <li>
+                <h4>Sigue a tus ídolos</h4>
+              </li>
+            </ul>
+          </div>
+        </div>
+    
+        <div class="copyright">
+          <h4>Todos los derechos reservados 2023</h4>
+          <img src="./Icons/Copyright.svg" alt="">
+        </div>
+      </footer>
+    
+      <script src="javascript/precarga.js"></script>
+      <script src="javascript/index.js"></script>
+      <script src="javascript/acceso.js"></script>
+</body>
+</html>

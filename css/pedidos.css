@@ -1,0 +1,114 @@
+:root {
+    --azul: #141b4d;
+    --rojo: #b31f2d;
+    --blanco: #fff;
+  
+    --negro: #000000;
+    --negro-gris: #343434;
+    --gris: #575757;
+    --gris-medio-claro: #696969;
+    --gris-claro: #b0aeae;
+  
+    --fuentePrincipal: "Share";
+  }
+  main{
+    background-color: var(--blanco);
+    height: 90vh;
+    max-height: 600px;
+  }
+
+  .search-title-container, .tabla-container {
+    height: 40%;
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px 0;
+  }
+  .search-title-container{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    max-height: 220px;
+  }
+  .search-component,.title-filtrar{
+    align-self: center;
+  }
+  .search-component{
+    border: 1px solid var(--gris);
+  }
+  .search-component i {
+    margin-left: 10px;
+  }
+  .component-title-container{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  .search-component input{
+    border: none;
+  }
+  .tabla-container{
+    margin-bottom: 10px;
+    overflow: auto;
+    background-color: var(--blanco);
+    max-height: 300px;
+  }
+  .tabla-pedidos{
+    background-color: #ebebeb;
+    table-layout: fixed;
+    height: 80%;
+    margin: 0 auto;
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Share';
+  }
+  .tabla-pedidos td, .tabla-pedidos th{
+    width: 100px;
+  }
+  .tabla-pedidos tr{
+    border-bottom: 2px solid var(--negro);
+  }
+  @media screen and (min-width:768px) {
+    .component-title-container{
+        flex-direction: row;
+        column-gap: 10px;
+    }
+  }
+  @media screen and (min-width:1199px) {
+    main{
+        min-height: 600px;
+        max-height: none;
+        height: 70vh;
+    }
+  }
+
+  table{
+    font-family: var(--fuentePrincipal);
+    background-color: var(--blanco);
+    overflow-x: auto;
+    overflow-y: scroll;
+    padding: 15px;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 10px 10px;
+    width: 95%;
+    
+}
+
+tbody{
+    max-height: 200px; /* Ajusta la altura máxima según tus necesidades */
+    overflow-y: scroll;
+}
+
+th{
+    background-color: var(--azul);
+    color: var(--blanco);
+    padding: 12px;
+}
+
+td{
+    padding: 10px;
+}
+
+tbody tr:nth-child(even){
+    background-color: var(--gris-claro);
+}

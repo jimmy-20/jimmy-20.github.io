@@ -1,0 +1,60 @@
+@import url(style.css);
+
+body{
+  background-color: var(--blanco);
+}
+#producto-categoria {
+  margin-bottom: 0;
+}
+
+.sect-productos{
+  border: 2px solid;
+  margin: 10px 0;
+  margin-right: 10px;
+}
+
+.pagos-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+}
+
+.sec-pagos,
+.forma_pagos {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 375px;
+  margin: 50px auto;
+}
+
+.forma_pagos{
+  margin-right: 30px;
+}
+
+.pago-paypal,
+.pago-visa {
+  padding: 10px;
+  background-color: azure;
+  border-radius: 20px;
+}
+
+.pago-paypal{
+  background-color: yellow;
+}
+
+.pago-visa{
+  background-color: var(--gris-claro);
+}
+
+@media (min-width: 768px) {
+  .main-container {
+    display: grid;
+    grid-template-columns: 1fr .5fr;
+  }
+
+  .producto{
+    grid-template-columns: repeat(2, 1fr) .1fr;
+  }
+}

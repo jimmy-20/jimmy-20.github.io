@@ -1,0 +1,101 @@
+@import url(style.css);
+
+#checkbox{
+    display: none;
+}
+
+#checkbox:checked ~ .container-contenido nav{
+    display: block;
+}
+.cabecera{
+    background-color: var(--azul);
+    height: 70px;
+    display: flex;
+    padding: 40px;
+    align-items: center;
+    width: 100%;
+}
+
+.cabecera label i{
+    font-size: 48px;
+    margin-left: 20px;
+}
+
+.cabecera img{
+    height: 58px;
+}
+
+.cabecera h3{
+    color: var(--blanco);
+    margin-left: 20px;
+}
+
+body{
+    height: 100vh;
+}
+
+.icono-hamburguesa{
+    cursor: pointer;
+    display: flex;
+    margin-right: 50px;
+}
+
+#icono-hamburguesa{
+    color: var(--blanco);
+}
+
+nav{
+    background: linear-gradient(var(--azul),var(--negro));
+    display: none;
+}
+
+.container-contenido{
+    display: grid;  
+    grid-template-columns: 1FR;
+    height: calc(100vh - 60px);
+
+}
+
+.menu-item{
+    display: flex;
+    gap: 15px;
+    height: 50px;
+    align-items: center;
+    padding: 10px;
+    margin: 20px;
+    text-align: justify;
+}
+
+.menu-item:hover{
+    cursor: pointer;
+    background-color: var(--gris);
+}
+
+.menu-item h4{
+    color: var(--blanco);
+    font-weight: normal;
+}
+
+
+@media (min-width:1000px){ 
+    .container-contenido{
+        grid-template-columns: 200px 1fr;
+        height: 100vh;
+    }
+
+    nav{
+        display: block;
+    }
+
+    .icono-hamburguesa{
+        display: none;
+    }
+    
+}
+
+main{
+    background-color: #ebebeb;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 100%;
+}

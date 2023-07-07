@@ -1,0 +1,160 @@
+@import url(style.css);
+
+header{
+    margin: 15px;
+}
+
+.sect-busqueda{
+    padding:5% ;
+    text-align: center;
+    background:var(--blanco);
+    border-radius:.8rem;
+    margin: 10px;
+}
+
+.dato-entrada{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+button{
+    width: 130px;
+    height: 50px;
+    background-color: var(--azul);
+    border-radius: 20px;
+    color: var(--blanco);
+    font-family: var(--fuentePrincipal);
+    font-size: 20px;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: auto;
+}
+
+input[type="text"],select{
+    width: 100%;
+}
+
+input[type=button]{
+    width: 120px;
+}
+
+.separador{
+    border: 2px solid;
+    margin: 20px;
+    transition: all ease-in-out;
+    border-radius: 50%;
+}
+
+.titulo-tabla{
+    margin-left: 10px;
+}
+
+.botones{
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 20px;
+}
+
+@media (min-width:1000px) {
+    .sect-busqueda{
+        text-align:left;
+        padding: 30px;
+    } 
+
+    .sect-busqueda h2{
+        margin-bottom: 30px;
+    }
+    .dato-entrada{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .dato-entrada h4{
+        white-space: nowrap;
+        width: 200px;
+    }
+
+    input[type=button]{
+        width: 200px;
+    }
+}
+table{
+    font-family: var(--fuentePrincipal);
+    background-color: var(--blanco);
+    overflow-x: auto;
+    overflow-y: scroll;
+    padding: 15px;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 10px 10px;
+    width: 95%;
+    
+}
+
+tbody{
+    max-height: 200px; /* Ajusta la altura máxima según tus necesidades */
+    overflow-x: scroll;
+}
+
+th{
+    background-color: var(--azul);
+    color: var(--blanco);
+    padding: 12px;
+}
+
+td{
+    padding: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100px;
+}
+
+tbody tr:nth-child(even){
+    background-color: var(--gris-claro);
+}
+
+.paginacion{
+    display: flex;
+    gap: 10px;
+    margin: 10px 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.paginacion > div{
+    width: 35px;
+    height: 40px;
+    border: 1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--blanco);
+}
+
+.paginacion > div:nth-child(1){
+    background-color: var(--azul);
+}
+
+.paginacion > div:nth-child(1) a{
+    color: var(--blanco);
+}
+
+.paginacion > div > a{
+    font-family: var(--fuentePrincipal);
+    font-size: 20px;
+    color: var(--negro);
+    font-weight:bold;
+}

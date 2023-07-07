@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <meta charset="UTF-8">
+    <title>Inicio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Share:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet" />
+    <!-- Font awasome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/componentes.css">
+    <link rel="stylesheet" href="../css/equipoadmin.css">
+</head>
+<body>
+    <input type="checkbox" id="checkbox">
+    <div class="cabecera">
+        <label class="icono-hamburguesa" for="checkbox"><i id="icono-hamburguesa" class="fa-solid fa-bars"></i></label>
+        <img src="../Images/baseball_logo1.png" alt="Logo">
+        <h3>Tiro en Llamas</h3>
+    </div>
+
+    <div class="container-contenido">
+        <nav>
+            <a class="menu-item" href="Home.html"><i class="fa-solid fa-house" style="color: #ffffff;"></i>
+                <h4>Inicio</h4>
+            </a>
+            <a class="menu-item" href="noticia.html"><i class="fa-solid fa-newspaper" style="color: #ffffff;"></i>
+                <h4>Noticias</h4>
+            </a>
+            <a class="menu-item" href="comunicado.html"><i class="fa-solid fa-bullhorn" style="color: #ffffff;"></i>
+                <h4>Comunicados</h4>
+            </a>
+            <a class="menu-item"><i class="fa-solid fa-calendar-week" style="color: #ffffff;"></i>
+                <h4>Partidos</h4>
+            </a>
+            <a class="menu-item" href="equipo.html"><i class="fa-solid fa-people-group" style="color: #ffffff;"></i>
+                <h4>Equipos</h4>
+            </a>
+            <a class="menu-item" href="producto.html"><i class="fa-solid fa-box" style="color: #ffffff;"></i>
+                <h4>Productos</h4>
+            </a>
+            <a class="menu-item" href="../index.html"><i class="fa-sharp fa-solid fa-right-from-bracket" style="color: #ffffff;"></i>
+                <h4>Salir</h4>
+            </a>
+        </nav>
+
+        <main>
+            <header>
+                <h1>Sección de Equipos</h1>
+            </header>
+
+            <form class="sect-busqueda">
+                <h2>Búsqueda avanzada</h2>
+
+                <div class="dato-entrada">
+                    <h4>Buscar por nombre:</h4>
+                    <input type="text" name="titulo" id="" placeholder="Ingrese el nombre de un equipo">
+                </div>
+                
+                <div class="dato-entrada">
+                    <h4>Por ubicación:</h4>
+                    <select name="" id="">
+                        <option value="" selected>Todas</option>
+                        <option value="">Norte</option>
+                        <option value="">Sur</option>
+                        <option value="">Este</option>
+                        <option value="">Oeste</option>
+                    </select>
+                </div>
+
+                <button onclick="alert('Hola');">
+                    <h4>Buscar</h4>
+                    <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
+                </button>
+            </form>
+
+            <hr class="separador">
+            
+            <h2 class="titulo-tabla">Equipos registrados</h2>
+            <section class="botones">
+                <input type="button" value="Nuevo equipo">
+                <input type="button" value="Actualizar">
+            </section>
+
+            <table>
+                <thead>
+                    <th>Logo</th>
+                    <th>Nombre</th>
+                    <th>Localidad</th>
+                    <th>Teléfono</th>
+                    <th>Dirección</th>
+                    <th>Sitio</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Logo</td>
+                        <td>Los Angeles</td>
+                        <td>Norte</td>
+                        <td>3123123</td>
+                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, aperiam laudantium laborum voluptatum eum, quidem neque quasi natus quos autem a non assumenda doloribus perspiciatis voluptatem quam animi rerum reiciendis?</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="paginacion" id="paginacion-abajo">
+                <div><a href="">1</a></div>
+                <div><a href="">2</a></div>
+                <div><a href="">3</a></div>
+                <div><a href="">4</a></div>
+                <div><a href="">5</a></div>
+                <div><a href="">6</a></div>
+                <div><a href=""><img src="../Icons/Right.svg" width="32px" height="32px" alt=""></a></div>
+              </div>
+        </main>
+    </div>
+</body>
+</html>

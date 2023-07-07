@@ -67,7 +67,7 @@ select{
     color: var(--gris);
 }
 
-select::after{
+/* select::after{
     content: "";
     background-image: url(../img/flecha-arriba.png);
     width: 20px;
@@ -76,7 +76,7 @@ select::after{
     background-repeat: no-repeat;
     background-position: center;
     position: absolute;
-}
+} */
 
 ::placeholder{
     color: var(--gris);
@@ -260,6 +260,7 @@ main{
     font-weight: bold;
     width: 116px;
     height: 50px;
+    cursor: pointer;
 }
 
 #paginacion-abajo{
@@ -282,7 +283,10 @@ main{
     .container-boton{
         grid-column-start: 1;
         grid-column-end: 3;
-        
+    }
+
+    .container-boton input[type="button"]{
+        width: 250px;
     }
 }
 

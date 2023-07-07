@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Inicio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Share:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet" />
+    <!-- Font awasome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/home.css">
+
+</head>
+
+<body>
+    <input type="checkbox" id="checkbox">
+    <div class="cabecera">
+        <label class="icono-hamburguesa" for="checkbox"><i id="icono-hamburguesa" class="fa-solid fa-bars"></i></label>
+        <img src="../Images/baseball_logo1.png" alt="Logo">
+        <h3>Tiro en Llamas</h3>
+    </div>
+
+    <div class="container-contenido">
+        <nav>
+            <a class="menu-item" href="#"><i class="fa-solid fa-house" style="color: #ffffff;"></i>
+                <h4>Inicio</h4>
+            </a>
+            <a class="menu-item" href="noticia.html"><i class="fa-solid fa-newspaper" style="color: #ffffff;"></i>
+                <h4>Noticias</h4>
+            </a>
+            <a class="menu-item" href="comunicado.html"><i class="fa-solid fa-bullhorn" style="color: #ffffff;"></i>
+                <h4>Comunicados</h4>
+            </a>
+            <a class="menu-item"><i class="fa-solid fa-calendar-week" style="color: #ffffff;"></i>
+                <h4>Partidos</h4>
+            </a>
+            <a class="menu-item" href="equipo.html"><i class="fa-solid fa-people-group" style="color: #ffffff;"></i>
+                <h4>Equipos</h4>
+            </a>
+            <a class="menu-item" href="producto.html"><i class="fa-solid fa-box" style="color: #ffffff;"></i>
+                <h4>Productos</h4>
+            </a>
+            <a class="menu-item" href="../index.html" onclick="localStorage.clear();"><i class="fa-sharp fa-solid fa-right-from-bracket" style="color: #ffffff;"></i>
+                <h4>Salir</h4>
+            </a>
+        </nav>
+
+        <main>
+            <header>
+                <h1>Resumen semanal</h1>
+            </header>
+
+            <section class="container-resumen">
+                <div class="card-resumen">
+                    <div class="container-numero-card"><h2>11</h2></div>
+                    <div class="container-titulo-card"><h3># Partidos en la semana</h3></div>
+                </div>
+                <div class="card-resumen">
+                    <div class="container-numero-card"><h2>6</h2></div>
+                    <div class="container-titulo-card"><h3># Noticias publicadas</h3></div>
+                </div>
+                <div class="card-resumen">
+                    <div class="container-numero-card"><h2>77</h2></div>
+                    <div class="container-titulo-card"><h3># Productos enviados</h3></div>
+                </div>
+                <div class="card-resumen">
+                    <div class="container-numero-card"><h2>Caja de regalo de Los Ángeles</h2></div>
+                    <div class="container-titulo-card"><h3>Producto más popular</h3></div>
+                </div>
+            </section>
+            <!--<video
+            
+            class="video-directo"
+            controls
+            src="https://video.xx.fbcdn.net/v/t42.1790-2/352585571_1325752455022600_817065721410121920_n.mp4?_nc_cat=109&ccb=1-7&_nc_sid=985c63&efg=eyJ2ZW5jb2RlX3RhZyI6InN2ZV9zZCJ9&_nc_ohc=yGai3t0S-d0AX8l5EVu&tn=kJ7h93CD3NUbu5Gd&_nc_rml=0&_nc_ht=video.fmga4-1.fna&oh=00_AfBp8erlWM2sqDCmDCcZZfCxYzFKhL79S_Xna8Tn7SgM9g&oe=64A8E24E#t=0,60"
+            >
+            </video> -->
+
+            <h3 class="titulo-grafica">Ganancias percibidas</h3>
+            <div class="chart">
+                <div class="grid-line"></div>
+                <div class="grid-line" style="bottom: 100px;"></div>
+                <div class="bar" style="height: 200px;"></div>
+                <div class="bar2" style="height: 150px;"></div>
+                <div class="bar3" style="height: 120px;"></div>
+                <div class="bar4" style="height: 110px;"></div>
+                <div class="bar5" style="height: 80px;"></div>
+                <div class="label">Camisas</div>
+                <div class="label" style="left: 20%;">Pantalones</div>
+                <div class="label" style="left: 40%;">Accesorios</div>
+                <div class="label" style="left: 60%;">Cajas de Regalo</div>
+                <div class="label" style="left: 80%;">Gorras</div>
+              </div>
+        </main>
+    </div>
+    <script src="../javascript/home.js"></script>
+</body>
+
+</html>
