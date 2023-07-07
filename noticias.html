@@ -1,212 +1,355 @@
 <html>
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Tiro en llamas</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Share:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-          rel="stylesheet"
-        />
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link rel="stylesheet" href="css/static.css">
-        <link rel="stylesheet" href="css/noticias2.css">
-    </head>
-    <body>
-      <nav class="nav">
-        <div class="nav__logo">
-          <a href="index.html">
-            <img src="./Images/On-fire-Logo.png" width="85px" height="64px" alt="logo" />
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tiro en llamas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Share:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Font awasome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/static.css">
+  <link rel="stylesheet" href="./css/componentes.css">
+  <link rel="stylesheet" href="css/noticias2.css">
+</head>
+
+<body>
+  <div id="contenedor-precarga">
+    <div class="preloader" id="precarga"></div>
+    <h1 class="titulo-carga">Cargando...</h1>
+  </div>
+   <!-- Login -->
+   <div class="popup">
+    <div class="wrapper">
+      <span class="icon-close"><i class="fa-solid fa-xmark"></i></span>
+      <div class="form-box login2">
+        
+        <i class="fa-solid fa-circle-user"></i>
+        <h3>Inicio Sesión</h3>
+
+        <form action="#" id="loginForm" class="login-form">
+          <div class="input-box">
+            <input class="user-name" type="text" placeholder="Ingrese su usuario" required>
+            <label>Usuario</label>
+          </div>
+
+          <div class="input-box">
+            <input class="passwordLogin" type="password" placeholder="******" required>
+            <label>Contraseña</label>
+          </div>
+
+                    <button type="submit" id="btn-login" class="btn">Entrar</button>
+
+
+          <div class="inicio-google">
+            <p>O</p>
+            <P>Inicia con</P>
+            <a href="#"> <i class="fa-brands fa-google"></i> Google</a>
+          </div>
+          <div class="login-register">
+            <p class="login-register-p"> ¿Aún no tienes una cuenta ? <a href="#form-box register" class="register-link">Registrate!</a></p>
+          </div>
+        </form>
+      </div>
+
+      <div class="form-box register">
+        <h3>Registro</h3>
+
+        <div class="profile-image">
+          <i class="fa-solid fa-circle-user"></i>
+          <img id="profileImage" src="#" alt="Foto de perfil" style="width: 150px; 
+                height: 150px; 
+                border-radius: 50%;
+                display: none;">
+          <button id="profileImageButton" class="profile-image-button" onclick="openCameraModal()"><i
+              class="fa-sharp fa-solid fa-camera-retro"></i></button>
+        </div>
+
+
+        <form action="#" id="registerForm" class="resgister-form">
+
+
+          <div class="input-box">
+            <input type="email" class="email" required>
+            <label>Ingrese su correo electrónico:</label>
+          </div>
+
+          <div class="input-box">
+            <input type="text" class="userName" required>
+            <label> Ingrese su nombre de usuario</label>
+          </div>
+
+          <div class="input-box">
+            <input type="password" class="password" id="password" required>
+            <label>Ingrese una contraseña:</label>
+          </div>
+
+          <div class="input-box">
+            <input type="password" class="confirmPassword" id="confirmPassword" required>
+            <label>Ingrese de nuevo la contraseña:</label>
+          </div>
+
+          <div id="message" class="message"></div>
+
+          <div class="remember-forgot" required>
+            <label>
+              Al crear una cuenta en nuestro sitio,
+              estás aceptando nuestros términos de uso y políticas de privacidad.
+            </label>
+          </div>
+          <button type="submit" class="btn">Crear una cuenta nueva</button>
+
+          <div class="login-register">
+            <p>¿Ya tienes una cuenta? <a href="#form-box login" class="login-link">Inicie sesión aquí</a></p>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div id="cameraModal" class="modal">
+      <div class="modal-content">
+        <video id="cameraVideo" width="400" height="300" autoplay></video>
+        <button class="btn-submit" onclick="capturePhoto()">Capturar foto</button>
+      </div>
+    </div>
+  </div>
+  <!-- Termina login -->
+
+
+  <nav class="nav">
+    <div class="nav__logo">
+      <a href="index.html">
+        <img src="./Images/On-fire-Logo.png" width="85px" height="64px" alt="logo" />
+      </a>
+    </div>
+
+    <input type="checkbox" name="" id="toggle">
+    <label for="toggle" class="toggle"><i class="fa-solid fa-bars"></i></label>
+    <div class="menu">
+      <ul>
+        <li> <a href="noticias.html">Noticias</a></li>
+        <li> <a href="comunicados.html">Comunicados</a></li>
+        <li> <a href="calendario.html">Calendario</a></li>
+        <li> <a href="equipos.html">Equipos</a></li>
+        <li> <a href="tienda.html">Tienda</a> </li>
+      </ul>
+    </div>
+    <div class="algo">
+      <a href="carrito.html" class="carrito"><img src="./Icons/Carrito.svg" width="48px" height="48px"
+          class="icon" /></a>
+          <a href="#" class="login" id="login">
+            <p class="bold">Iniciar Sesión</p>
+            <img src="./Images/User.png" width="48px" height="48px" alt="login" />
           </a>
-        </div>
-  
-        <input type="checkbox" name="" id="toggle">
-        <label for="toggle"><i class="material-icons">menu</i></label>
-        <div class="menu">
-          <ul>
-            <li> <a href="noticias.html">Noticias</a></li>
-            <li> <a href="comunicados.html">Comunicados</a></li>
-            <li> <a href="calendario.html">Calendario</a></li>
-            <li> <a href="equipos.html">Equipos</a></li>
-            <li> <a href="tienda.html">Tienda</a> </li>
-          </ul>
-        </div>
-         <div class="algo">
-          <a href="carrito.html" class="carrito"><img src="./Icons/Carrito.svg" width="48px" height="48px" class="icon" /></a>
-           <a href="login.hmtl" class="login">
-              <p class="bold">Iniciar Sesión</p>
-              <img src="./Images/User.png" width="48px" height="48px" alt="login" />
-            </a>
-         </div>
-            
-      </nav>
-
-        <header class="titulo-pagina">
-            <h1>Descubre lo que ocurre en el baseball</h1>
-        </header>
-
-        <main>
-            <section class="busqueda">
-                <div class="dato-entrada">
-                   <h3>Búsqueda por palabra clave</h3>
-                   <input type="text" placeholder="Buscar por palabra clave">
-                </div>
-                
-                <div class="dato-entrada">
-                    <h3>Categoría</h3>
-                    <select name="" id="">
-                        <option value="" selected>Todas las categorías</option>
-                        <option value="">Jugadores</option>
-                        <option value="">Partidos</option>
-                        <option value="">Jugadas</option>
-                        <option value="">Anuncios</option>
-                        <option value="">Prácticas</option>
-                        <option value="">Opiniones</option>
-                    </select>
-                </div>
-
-               <div class="dato-entrada">
-                <h3>Año</h3>
-                <select name="" id="">
-                    <option value="" selected>Filtrar por año</option>
-                    <option value="">2023</option>
-                    <option value="">2022</option>
-                    <option value="">2021</option>
-                    <option value="">2020</option>
-                </select>
-               </div>
-                
-               <div class="dato-entrada">
-                <h3>Mes</h3>
-                <select name="" id="">
-                    <option value="" selected>Filtrar por mes</option>
-                    <option value="">Enero</option>
-                    <option value="">Febrero</option>
-                    <option value="">Marzo</option>
-                    <option value="">Abril</option>
-                    <option value="">Mayo</option>
-                    <option value="">Junio</option>
-                    <option value="">Julio</option>
-                    <option value="">Agosto</option>
-                    <option value="">Septiembre</option>
-                    <option value="">Octubre</option>
-                    <option value="">Noviembre</option>
-                    <option value="">Diciembre</option>
-                </select>
-               </div>
-                
-                <div class="container-boton">
-                    <input type="button" value="Buscar">
-                    <input type="button" id="btn-limpiar" value="Limpiar">
-                </div>
-            </section>
-
-            <section class="noticias">
-                <div class="paginacion">
-                    <div><a href="">1</a></div>
-                    <div><a href="">2</a></div>
-                    <div><a href="">3</a></div>
-                    <div><a href="">4</a></div>
-                    <div><a href="">5</a></div>
-                    <div><a href="">6</a></div>
-                    <div><a href=""><img src="./Icons/Right.svg" width="32px" height="32px" alt=""></a></div>
-                </div>
-
-                <article>
-                    <img src="./Images/Titular 1 Foto.png" alt="">
-                    <div class="article-info">
-                        <h4 class="fecha italic">12/04/2023</h4>
-                        <h4 class="titulo">Carlotes Fuentes retira a Dennis Correa con una buena atrapada</h4>
-                        <input class="ver-mas" type="button" value="Ver más">
-                        <div class="compartir-en">
-                            <h4>Compartir:</h4>
-                            <a href=""><img src="./Icons/Facebook.svg" width="32px" height="32px" alt=""></a>
-                            <a href=""><img src="./Icons/Twitter.svg" width="32px" height="32px" alt=""></a>
-                            <a href=""><img src="./Icons/Instagram.svg" width="32px" height="32px" alt=""></a>
-                        </div>
-                    </div>
-                </article>
-
-                <article>
-                    <img src="./Images/Noticia 2.png" alt="">
-                    <div class="article-info">
-                        <h4 class="fecha italic">12/04/2023</h4>
-                        <h4 class="titulo">Julio Rodríguez abandona el juego tras aparente lesión de espalda</h4>
-                        <input class="ver-mas" type="button" value="Ver más">
-                        <div class="compartir-en">
-                            <h4>Compartir:</h4>
-                            <a href=""><img src="./Icons/Facebook.svg" width="32px" height="32px" alt=""></a>
-                            <a href=""><img src="./Icons/Twitter.svg" width="32px" height="32px" alt=""></a>
-                            <a href=""><img src="./Icons/Instagram.svg" width="32px" height="32px" alt=""></a>
-                        </div>
-                    </div>
-                </article>
-
-                <article>
-                    <img src="./Images/Noticia 3.png" height="300px" width="300px" alt="">
-                    <div class="article-info">
-                        <h4 class="fecha italic">12/04/2023</h4>
-                        <h4 class="titulo">Javy Guerra regresa a los Rays tras un cambio con los Cerveceros</h4>
-                        <input class="ver-mas" type="button" value="Ver más">
-                        <div class="compartir-en">
-                            <h4>Compartir:</h4>
-                            <a href=""><img src="./Icons/Facebook.svg" width="32px" height="32px" alt=""></a>
-                            <a href=""><img src="./Icons/Twitter.svg" width="32px" height="32px" alt=""></a>
-                            <a href=""><img src="./Icons/Instagram.svg" width="32px" height="32px" alt=""></a>
-                        </div>
-                    </div>
-                </article>
-
-                <div class="paginacion" id="paginacion-abajo">
-                    <div><a href="">1</a></div>
-                    <div><a href="">2</a></div>
-                    <div><a href="">3</a></div>
-                    <div><a href="">4</a></div>
-                    <div><a href="">5</a></div>
-                    <div><a href="">6</a></div>
-                    <div><a href=""><img src="./Icons/Right.svg" width="32px" height="32px" alt=""></a></div>
-                </div>
-            </section>
-        </main>
-
-        <footer>
-            <div class="fo-nosotros">
-              <div>
-                <ul>
-                  <li><h3>Sobre nosotros</h3></li>
-                  <li><h4>¿Quienes somos?</h4></li>
-                  <li><h4>Misión</h4></li>
-                  <li><h4>Visión</h4></li>
-                </ul>
-              </div>
-      
-              <div class="siguenos">
-                <div class="redes-sociales">
-                  <img src="./Icons/Twitter-blanco.svg" alt="" />
-                  <img src="./Icons/Facebook-blanco.svg" alt="" />
-                  <img src="./Icons/Instagram-blanco.svg" alt="" />
-                  <img src="./Icons/Youtube-blanco.svg" alt="" />
-                </div>
-      
-                <h3>Siguenos en nuestras redes sociales</h3>
-              </div>
-      
-              <div>
-                <ul>
-                  <li><h3>Registrate para</h3></li>
-                  <li><h4>Últimas noticias</h4></li>
-                  <li><h4>Información relevante</h4></li>
-                  <li><h4>Sigue a tus ídolos</h4></li>
-                </ul>
+          <div class="mi-cuenta" id="mi-cuenta">
+            <div class="menu-item">
+              <input type="checkbox" id="toggle-menu" class="toggle-menu">
+              <label for="toggle-menu" class="menu-title bold"><img src="./Images/User.png" width="48px" height="48px" alt="login" /> <p>Mi Cuenta</p>
+              </label>
+              <div class="submenu">
+                <a href="cuenta.html">Gestionar Cuenta</a>
+                <a href="pedidos.html">Mis pedidos</a>
+                <a href="#" onclick="localStorage.clear();window.location.reload;">Salir</a>
               </div>
             </div>
-            
-            <div class="copyright">
-              <h4>Todos los derechos reservados 2023</h4>
-              <img src="./Icons/Copyright.svg" alt="">
-            </div>
-          </footer>
-    </body>
+          </div>
+    </div>
+
+  </nav>
+
+  <header class="titulo-pagina">
+    <h1>Descubre lo que ocurre en el baseball</h1>
+  </header>
+
+  <main>
+    <section class="busqueda">
+      <div class="dato-entrada">
+        <h3>Búsqueda por palabra clave</h3>
+        <input type="text" placeholder="Buscar por palabra clave">
+      </div>
+
+      <div class="dato-entrada">
+        <h3>Categoría</h3>
+        <select name="" id="">
+          <option value="" selected>Todas las categorías</option>
+          <option value="">Jugadores</option>
+          <option value="">Partidos</option>
+          <option value="">Jugadas</option>
+          <option value="">Anuncios</option>
+          <option value="">Prácticas</option>
+          <option value="">Opiniones</option>
+        </select>
+      </div>
+
+      <div class="dato-entrada">
+        <h3>Año</h3>
+        <select name="" id="">
+          <option value="" selected>Filtrar por año</option>
+          <option value="">2023</option>
+          <option value="">2022</option>
+          <option value="">2021</option>
+          <option value="">2020</option>
+        </select>
+      </div>
+
+      <div class="dato-entrada">
+        <h3>Mes</h3>
+        <select name="" id="">
+          <option value="" selected>Filtrar por mes</option>
+          <option value="">Enero</option>
+          <option value="">Febrero</option>
+          <option value="">Marzo</option>
+          <option value="">Abril</option>
+          <option value="">Mayo</option>
+          <option value="">Junio</option>
+          <option value="">Julio</option>
+          <option value="">Agosto</option>
+          <option value="">Septiembre</option>
+          <option value="">Octubre</option>
+          <option value="">Noviembre</option>
+          <option value="">Diciembre</option>
+        </select>
+      </div>
+
+      <div class="container-boton">
+        <input type="button" value="Buscar">
+        <input type="button" id="btn-limpiar" value="Limpiar">
+      </div>
+    </section>
+
+    <section class="noticias">
+      <div class="paginacion">
+        <div><a href="">1</a></div>
+        <div><a href="">2</a></div>
+        <div><a href="">3</a></div>
+        <div><a href="">4</a></div>
+        <div><a href="">5</a></div>
+        <div><a href="">6</a></div>
+        <div><a href=""><img src="./Icons/Right.svg" width="32px" height="32px" alt=""></a></div>
+      </div>
+
+      <article>
+        <img src="./Images/Titular 1 Foto.png" alt="">
+        <div class="article-info">
+          <h4 class="fecha italic">12/04/2023</h4>
+          <h4 class="titulo">Carlotes Fuentes retira a Dennis Correa con una buena atrapada</h4>
+          <input class="ver-mas" type="button" value="Ver más" onclick="window.location.href = 'comunicado.html'"/>
+          <div class="compartir-en">
+            <h4>Compartir:</h4>
+            <a href=""><img src="./Icons/Facebook.svg" width="32px" height="32px" alt=""></a>
+            <a href=""><img src="./Icons/Twitter.svg" width="32px" height="32px" alt=""></a>
+            <a href=""><img src="./Icons/Instagram.svg" width="32px" height="32px" alt=""></a>
+          </div>
+        </div>
+      </article>
+
+      <article>
+        <img src="./Images/Noticia 2.png" alt="">
+        <div class="article-info">
+          <h4 class="fecha italic">12/04/2023</h4>
+          <h4 class="titulo">Julio Rodríguez abandona el juego tras aparente lesión de espalda</h4>
+          <input class="ver-mas" type="button" value="Ver más">
+          <div class="compartir-en">
+            <h4>Compartir:</h4>
+            <a href=""><img src="./Icons/Facebook.svg" width="32px" height="32px" alt=""></a>
+            <a href=""><img src="./Icons/Twitter.svg" width="32px" height="32px" alt=""></a>
+            <a href=""><img src="./Icons/Instagram.svg" width="32px" height="32px" alt=""></a>
+          </div>
+        </div>
+      </article>
+
+      <article>
+        <img src="./Images/Noticia 3.png" height="300px" width="300px" alt="">
+        <div class="article-info">
+          <h4 class="fecha italic">12/04/2023</h4>
+          <h4 class="titulo">Javy Guerra regresa a los Rays tras un cambio con los Cerveceros</h4>
+          <input class="ver-mas" type="button" value="Ver más">
+          <div class="compartir-en">
+            <h4>Compartir:</h4>
+            <a href=""><img src="./Icons/Facebook.svg" width="32px" height="32px" alt=""></a>
+            <a href=""><img src="./Icons/Twitter.svg" width="32px" height="32px" alt=""></a>
+            <a href=""><img src="./Icons/Instagram.svg" width="32px" height="32px" alt=""></a>
+          </div>
+        </div>
+      </article>
+
+      <div class="paginacion" id="paginacion-abajo">
+        <div><a href="">1</a></div>
+        <div><a href="">2</a></div>
+        <div><a href="">3</a></div>
+        <div><a href="">4</a></div>
+        <div><a href="">5</a></div>
+        <div><a href="">6</a></div>
+        <div><a href=""><img src="./Icons/Right.svg" width="32px" height="32px" alt=""></a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="fo-nosotros">
+      <div>
+        <ul>
+          <li>
+            <h3>Sobre nosotros</h3>
+          </li>
+          <li>
+            <h4>¿Quienes somos?</h4>
+          </li>
+          <li>
+            <h4>Misión</h4>
+          </li>
+          <li>
+            <h4>Visión</h4>
+          </li>
+        </ul>
+      </div>
+
+      <div class="siguenos">
+        <div class="redes-sociales">
+          <img src="./Icons/Twitter-blanco.svg" alt="" />
+          <img src="./Icons/Facebook-blanco.svg" alt="" />
+          <img src="./Icons/Instagram-blanco.svg" alt="" />
+          <img src="./Icons/Youtube-blanco.svg" alt="" />
+        </div>
+
+        <h3>Siguenos en nuestras redes sociales</h3>
+      </div>
+
+      <div>
+        <ul>
+          <li>
+            <h3>Registrate para</h3>
+          </li>
+          <li>
+            <h4>Últimas noticias</h4>
+          </li>
+          <li>
+            <h4>Información relevante</h4>
+          </li>
+          <li>
+            <h4>Sigue a tus ídolos</h4>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="copyright">
+      <h4>Todos los derechos reservados 2023</h4>
+      <img src="./Icons/Copyright.svg" alt="">
+    </div>
+  </footer>
+
+  <script src="javascript/precarga.js"></script>
+  <script src="javascript/index.js"></script>
+  <script src="javascript/acceso.js"></script>
+
+</body>
+
 </html>
