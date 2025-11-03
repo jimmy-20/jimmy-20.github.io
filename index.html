@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <!--Metadatos-->
+  <meta charset="UTF-8">
+  <meta name="author" content="Jimmy Soza">
+  <meta name="description" content="Portafolio de desarrollador web">
+  <meta name="keywords" content="HTML,CSS, JavaScript, Bootstrap, CSharp">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--Titulo-->
+  <link rel="icon" type="image/x-icon" href="images/icon-code.svg">
+  <title>Portafolio || Jimmy Soza</title>
+
+  <!--Bootstrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+  <!--Estilos propio-->
+  <link rel="stylesheet" href="style.css">
+
+  <!--Google Font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Rubik+Dirt&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-md navbar-light">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler"
+        aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbar-toggler">
+        <a class="navbar-brand" href="#">
+          <img class="nav-logo" src="./images/Logo.png" width="50" alt="Logo de pagina web">
+        </a>
+        <ul class="navbar-nav d-flex align-items-center">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#about-me">Sobre mi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#myprojects">Proyectos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-disabled="true" href="#testimonios">Testimonio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-disabled="true" href="#contact-me">Contacto</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!--Seccion Hero-->
+  <section class="hero align-items-stretch" id="hero">
+
+    <div class="hero-principal">
+      <img class="hero-img-presentacion" src="./images/Me.png" alt="Foto de presentacion">
+      <h1>Jimmy Soza</h1>
+      <h2>Analista y desarrollador de sistemas web</h2>
+    </div>
+
+    <div class="hero-footer">
+      <img class="hero-footer-imagen img-fluid" src="./images/imagen presentacion.png" alt="Pc con diagramas y codigo">
+    </div>
+  </section>
+
+  <section class="about-me darkside" id="about-me">
+    <div class="about-me-container">
+      <h2 class="section-title">Conoce a Jimmy Soza</h2>
+      <p class="section-text">Ingeniero de sistemas capaz de desenvolverse en las áreas de TI en organizaciones y proyectos, con conocimientos tanto de Backend como de Frontend, garantizando claridad y optimización en la transformación digital y creación de sistemas informáticos</p>
+    </div>
+  </section>
+
+  <section class="experience whitesite" id="experience">
+    <div class="container text-center">
+      <div class="row">
+        <div class="column col-12 col-md-4">
+          <div class="experience-content">
+            <div class="experience-header">
+              <i class="bi bi-backpack2"></i>
+            <p class="experience-title">Estudios</p>
+          </div>
+          <p class="experience-text">
+            A través del plan de estudios de la Universidad Nacional de Ingeniería, opté por 
+            indagar, aprender y manejar diferentes herramientas capaces de resolver diferentes 
+            problemáticas, adquiriendo habilidades profesionales y blandas
+          </p>
+          </div>
+          
+          <div class="badges-container">
+            <span class="badge text-bg-primary">Liderazgo</span>
+            <span class="badge text-bg-primary">Redacción</span>
+            <span class="badge text-bg-primary">Análisis</span>
+            <span class="badge text-bg-primary">Modelación de procesos</span>
+            <span class="badge text-bg-primary">Desarrollo</span>
+          </div>
+        </div>
+
+        <div class="column col-12 col-md-4">
+
+          <div class="experience-content">
+              <div class="experience-header">
+              <i class="bi bi-laptop"></i>
+              <p class="experience-title">Certificaciones</p>
+            </div>
+            <p class="experience-text"> 
+              A través de diferentes cursos, tiempos de práctica y lecturas profundas en documentaciones, 
+              logré aprender diferentes tecnologías, marcos de trabajo y arquitecturas de software
+            </p>
+          </div>
+          
+          <div class="badges-container">
+            <span class="badge text-bg-primary">HTML</span>
+            <span class="badge text-bg-primary">CSS</span>
+            <span class="badge text-bg-primary">Javascript</span>
+            <span class="badge text-bg-primary">Java</span>
+            <span class="badge text-bg-primary">C#</span>
+            <span class="badge text-bg-primary">Entity Framework</span>
+            <span class="badge text-bg-primary">ASP.NET</span>
+            <span class="badge text-bg-primary">Blazor</span>
+            <span class="badge text-bg-primary">Bootstrap</span>
+            <span class="badge text-bg-primary">SQL</span>
+            <span class="badge text-bg-primary">Power BI</span>
+          </div>
+        </div>
+
+        <div class="column col-12 col-md-4">
+          <div class="experience-content">
+            <div class="experience-header">
+              <i class="bi bi-journal-bookmark-fill"></i>
+            <p class="experience-title">Artículos</p>
+          </div>
+          <p class="experience-text">Recopilo información y ejemplo de diferentes fuentes, leer 
+            soluciones y adaptarlas según sea necesario, por lo que documento mis dudas con sus 
+            respuestas, hasta quedar satisfecho del que, como y porque se plantea la solución
+          </p>
+          </div>
+         
+          <div class="badges-container">
+            <span class="badge text-bg-primary">Pensamiento crítico</span>
+            <span class="badge text-bg-primary">Juicio</span>
+            <span class="badge text-bg-primary">Calidad</span>
+            <span class="badge text-bg-primary">Atención a los detalles</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="myprojects whitesite d-flex flex-column" id="myprojects">
+    <h2 class="section-title">Mis proyectos</h2>
+    <h3 class="section-description">Estos son algunos proyectos que he desarrollado</h3>
+
+    <div class="container text-center project-container">
+      <div class="row">
+
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="project">
+            <img src="./images/Preview-SistemaFerretero.png" alt="">
+            <div class="overlay">
+              <p class="project-title">Sistema de información ferretero</p>
+              <div class="icons-container">
+                <a href="https://www.youtube.com/watch?v=RrEA0RMkXX8" target="_blank" rel="noopener noreferrer"><i class="bi bi-youtube"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="project">
+            <img src="./images/Preview-Patrones.png" alt="">
+            <div class="overlay">
+              <p>Practica e implementación de patrones de diseño</p>
+              <div class="icons-container">
+                <a href="https://github.com/jimmy-20/Design-Patterns-en-CSharp" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="project">
+            <img src="./images/Preview-FM2.PNG" alt="">
+            <div class="overlay">
+              <p>FM - Tarjeta de previsualización</p>
+              <div class="icons-container">
+                <a href="https://github.com/jimmy-20/FM-CardsColumns" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i></a>
+                <a href="https://graceful-creponne-e6fdd4.netlify.app/" target="_blank" rel="noopener noreferrer"><i
+                    class="bi bi-app"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="project">
+            <img src="./images/Preview-FM3.png" alt="">
+            <div class="overlay">
+              <p>FM - Tarjeta de NFT</p>
+              <div class="icons-container">
+                <a href="https://github.com/jimmy-20/FM-NFT_Card" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i></a>
+                <a href="https://neon-pasca-bd2c0d.netlify.app/" target="_blank" rel="noopener noreferrer"><i
+                    class="bi bi-app"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="project">
+            <img src="./images/Preview-ServiPlus-BI.png" alt="">
+            <div class="overlay">
+              <p>ETL con Power BI con ServiPlus</p>
+              <div class="icons-container">
+                <a href="https://app.powerbi.com/view?r=eyJrIjoiNDgwYzI4YTgtZDhmMi00ZDNkLTg1YjYtNDY1ODUyMmZjMzc3IiwidCI6ImUxMTlmY2ZmLTRmMzUtNDMzOC04MzQzLTc2ZDQ1OTg5NGI2YiIsImMiOjR9" target="_blank" rel="noopener noreferrer"><i class="bi bi-app"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <a href="https://github.com/jimmy-20" rel="noopener noreferrer" target="_blank">
+      <button type="button" class="btn btn-info">
+        <i class="bi bi-arrow-right-circle-fill"></i>
+        Ver mas proyectos
+      </button>
+    </a>
+  </section>
+
+  <section class="articles justify-content-start" id="articles">
+    <h2 class="section-title text-dark">Articulos</h2>
+
+    <div class="card">
+      <div class="card-header">
+        Mas recientes
+      </div>
+      <ul class="list-group list-group-flush">
+        <a target="_blank" href="https://sour-value-a88.notion.site/Apuntes-a-tomar-en-cuenta-al-aplicar-estilos-y-realizar-la-arquitectura-del-CSS-de-tu-sitio-web-3fa1b1b684144565a3f82719da0efd00">
+          <li class="list-group-item">Metodologías y arquitecturas de un CSS para tu sitio web</li>
+        </a>
+
+        <a href="https://www.notion.so/Todo-lo-que-debes-saber-sobre-diagramas-UML-2-5-1-bcaf8ad702284036b4ebbd9d95f8ab50?source=copy_link">
+          <li class="list-group-item">Nomenclatura profunda en diagramas UML</li>
+        </a>
+
+        <a href="https://www.notion.so/Porqu-son-importantes-los-patrones-de-dise-o-en-la-programaci-n-2d06ec91bdd94d7994b53f8becdcb0ad?source=copy_link">
+          <li class="list-group-item">¿Qué resuelve cada patrón de diseño?</li>
+        </a>
+
+        <a href="https://www.notion.so/Tipos-de-arquitectura-de-un-sistema-inform-tico-28cd2e80febc80089483e7a04c6210d2?source=copy_link">
+          <li class="list-group-item">Tipos de arquitectura en un sistema informático</li>
+        </a>
+        
+      </ul>
+    </div>
+
+    <a href="#" type="button" class="btn btn-info">
+      <i class="bi bi-arrow-right-circle-fill"></i> Ver mas articulos
+    </a>
+
+  </section>
+
+  <!--<section class="testimonios whitesite" id="testimonios">
+    <h2 class="section-title">Testimonios</h2>
+    <h3>Estos son algunos testimonios de mis clientes</h3>
+
+    <div id="testimonios-carrusel" class="carousel carousel-dark slide">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+
+          <div class="container">
+            <img class="testimonio-imagen" src="./images/Cliente Testimonio.jpg" class="d-block w-100" alt="Primero">
+            <p class="testimonio-texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore ipsum quo rem perferendis q</p>
+            <div class="testimonio-info">
+              <p class="referencia">Gino</p>
+              <p class="cargo">Gerente de proyectos en Desarrollo Web</p>
+            </div>
+          </div>   
+
+        </div>
+
+        <div class="carousel-item">
+          <div class="container">
+            <img class="testimonio-imagen" src="./images/Cliente Testimonio.jpg" class="d-block w-100" alt="Primero">
+            <p class="testimonio-texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore ipsum quo rem perferendis q</p>
+            <div class="testimonio-info">
+              <p class="referencia">Maria</p>
+              <p class="cargo">Gerente de proyectos en Desarrollo Web</p>
+            </div>
+          </div>   
+        </div>
+
+        <div class="carousel-item">
+          <div class="container">
+            <img class="testimonio-imagen" src="./images/Cliente Testimonio.jpg" class="d-block w-100" alt="Primero">
+            <p class="testimonio-texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore ipsum quo rem perferendis q</p>
+            <div class="testimonio-info">
+              <p class="referencia">Jeison</p>
+              <p class="cargo">Gerente de proyectos en Desarrollo Web</p>
+            </div>
+          </div>   
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#testimonios-carrusel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#testimonios-carrusel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Siguiente</span>
+      </button>
+    </div>
+  </section>-->
+
+  <section class="contact-me darkside" id="contact-me">
+    <div class="container">
+      <div class="container rectangle text-center d-flex justify-content-evenly">
+        <div class="row">
+
+          <div class="col-12 col-md-4 section-title">
+            Hablemos
+          </div>
+          <div class="col-12 col-md-4 description">
+            Contáctame para hacer realidad tus ideas en proyectos
+          </div>
+          <div class="col-12 col-md-4" >
+            <a href="mailto: developjaso@gmail.com">
+              <button type="button">
+                <i class="bi bi-envelope-check-fill"></i> Contacto
+              </button>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="darkside d-flex flex-column align-items-center justify-content-center">
+    <div class="footer-logo-container">
+      <img class="footer-logo" src="./images/Logo.png" alt="Logo de portafolio">
+    </div>
+    <p class="footer-text">Aprendo y creo todos los dias <br>Creemos un proyecto juntos</p>
+    <div class="icons-contact d-flex flex-wrap align-items-center justify-content-center">
+      <a href="https://wa.me/50578029756?text=Hola,%20Me%20gustaria%20contactarme%20contigo" target="_blank" rel="noopener noreferrer">
+        <i class="bi bi-telephone"></i>
+      </a>
+      <a href="https://www.instagram.com/alex_27072/" target="_blank" rel="noopener noreferrer">
+        <i class="bi bi-instagram"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/jimmy-alex-soza-ortiz-a11857262/" target="_blank" rel="noopener noreferrer">
+        <i class="bi bi-linkedin"></i>
+      </a>
+      <a href="https://www.youtube.com/@gitjasoyt7733" target="_blank" rel="noopener noreferrer">
+        <i class="bi bi-youtube"></i>
+      </a>
+    </div>
+
+      <div class="copyright">Creado por Jimmy Soza (2025) &#169;</div>
+  </footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
