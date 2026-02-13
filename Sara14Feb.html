@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>1</title>
+    <link rel="stylesheet" href="./Sara/style.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+    <section class="header">
+        <div class="header-background" id="bgPrincipal">
+            <button class="header-background__press" id="btnPress">Presioname</button>
+        </div>
+    </section>
+
+    <section class="letter">
+        <div class="letter-preview">
+            <a href="#carta" class="letter-btn"><i class="bi bi-arrow-down-circle-fill"></i></a>
+        </div>
+
+        <article id="carta">
+            <div class="letter-expression">
+                <i class="bi bi-bookmark-heart" id="bookmark"></i>
+                <p>Hay personas que llegan para cambiar el ritmo de tu vida, pero tu has cambiado
+                el ritmo de mi corazón, y lo has hecho de la manera mas hermosa posible
+                </p>
+                <i class="bi bi-bookmark-heart" id="bookmark"></i>
+            </div>
+            
+
+            <p>Me resulta complicado intentar explicar el origen de lo que siento por ti, pero 
+                desde que te conoci, has estado no solo para mi, si no que he tenido la oportunidad
+                de irte conociendo poco a poco, desde tus gustos y preferencias, hasta momentos intimos
+                que hemos tenido tanto de tu vida pasada como de la mia. Hemos tenido nuestras discusiones, momentos
+                en el que solo persiste el enojo o la molestía, pero hemos podido salir adelante a pesar de las diferencias
+                que tenemos entre nosotros.
+            </p>
+
+            <p>
+                Puede que no hayas tenido una buena vida, a pesar de las diferentes maneras que te han llamado, no he logrado ver 
+                algo malo en tí como tanto insistes que mereces, eres una chica increible, espectacular, hermosa, preciosa, tan blanca
+                como la nieve, tan dulce como un helado, mientras mas tiempo pase, mas a gusto se siente. Tienes un lindo cabello, una
+                hermosa piel, unos cachetes que se ven tan adorables y suaves, unos labios bien lindos de color rojo, unas piernas esbeltas preciosas y una mirada que intenta
+                profundizar en esa persona, por el miedo a volver a ser lastimada de nuevo.
+            </p>
+
+            <p>
+                No solo tienes un buen físico, si no un gran corazón, que de la mano, te convierten en la increible chica que eres, tienes un corazón muy lindo, eres amable,
+                cariñosa, amorosa, dispuesta a hacer lo que puedas por ayudar a las personas a quien quieres, te sueles preocupar por su salud, interesar por esa persona, 
+                capaz de intentar hacer lo imposible en posible con tal de apoyar a las personas a quien estimas, con tus ideas y ocurrencias eres una chica 
+                divertida que le gusta los videojuegos, pasarla bien, pero sobre todo despejarte del mundo real para tener un poco de diversión, te esfuerzas a diario dia tras dia 
+                tanto en tu casa, como tu vida personal, intentando salir adelante con lo que tengas, tienes la paciencia y perserverancia para alcanzar tus metas y grandes sueños
+                que tengas, sueles tener miedo de por lo que diga la gente de ti, pero el hecho que digan cosas horribles de ti, eso no te hace menos, no te resta valor, no te hace 
+                menos importante y sobre todo, no te hace una mala chica.
+            </p>
+
+            <p>
+                Y a pesar de todo, con tus luces y tus sombras, con tus miedos y tus fortalezas, yo te elijo. 
+                No porque seas perfecta, sino porque eres tú. Porque cada parte de tu historia, cada cicatriz 
+                y cada sonrisa, te convierten en la persona que admiro y quiero en mi vida. 
+                No sé qué nos depare el futuro, pero sí sé que mientras caminemos juntos, quiero seguir descubriendo 
+                cada versión de ti, apoyarte cuando dudes, abrazarte cuando el mundo esté en tu contra y recordarte 
+                siempre el valor tan inmenso que tienes.
+            </p>
+        </article>
+    </section>
+
+    <section class="carrusel">
+        <article>
+            Dia que empezamos a hablar
+        </article>
+        <article>
+            Dia que hicimos nuestra primer promesa
+        </article>
+        <article>
+            Dia que tuvimos nuestra primera platica sincera
+        </article>
+        <article>
+            Dia que dedique mi primera carta a ti
+        </article>
+        <article>
+            Dia que empezamos a jugar minecraft
+        </article>
+        <article>
+            Dia que empezamos a jugar Terraria
+        </article>
+    </section>
+
+    <section>
+        Linea de tiempo de promesas que hemos hecho
+    </section>
+
+    <footer class="footer">
+        Pie de pagina
+    </footer>
+
+<script>
+    let fondoInicial = document.getElementById("bgPrincipal");
+    let btnPress = document.getElementById("btnPress")
+    let flag = false
+
+    btnPress.addEventListener("click",()=>{
+        if (!flag){
+            fondoInicial.style.backgroundImage = "url(Sara/Presentacion-Eagster.png)";
+            flag = true;
+        }else{
+            fondoInicial.style.backgroundImage = "url(Sara/Presentacion-Inicial.png)";
+            flag = false;
+        }
+    });
+</script>
+
+</body>
+</html>
