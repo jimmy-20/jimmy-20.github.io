@@ -107,3 +107,118 @@ button{
     font-size: 32px;
     display:inline-block;
 }
+
+.carrusel {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 40px;
+}
+
+.card {
+  min-width: 280px;
+  min-height: 200px;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  border-radius: 15px;
+  padding: 20px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.card-title {
+  font-weight: bold;
+  text-align: center;
+  font-family: Lobster;
+  color: white;
+}
+
+.card-content {
+  max-height: 0;
+  overflow: hidden;
+  margin-top: 10px;
+  transition: max-height 0.5s ease;
+  font-size: 14px;
+  opacity: 0.9;
+  font-family: var(--text);
+}
+
+.card.active .card-content {
+  max-height: 200px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  font-family: var(--text);
+  color: var(--secondary-color);
+}
+
+.marcador {
+  width: 0%;
+  height: 4px;
+  background: linear-gradient(90deg, #ff4d6d, #ff8fa3);
+  margin: 10px auto 0;
+  border-radius: 10px;
+  animation: aparecer 2s ease infinite;
+}
+
+@keyframes aparecer {
+  to {
+    width: 60%;
+  }
+}
+
+#card-1 {
+    background-image:
+        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+        url("./Carrusel-1.jpeg");
+    background-size: cover;
+}
+
+#card-2 {
+    background-image:
+        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+        url("./Carrusel-2.jpeg");
+    background-size: cover;
+    background-position: center;
+
+}
+
+#card-3 {
+    background-image:
+        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+        url("./Carrusel-3.jpeg");
+    background-size: cover;
+}
+
+#card-4 {
+    background-image:
+        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+        url("./Carrusel-4.jpeg");
+    background-size: cover;
+}
+
+#card-5 {
+    background-image:
+        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+        url("./Carrusel-5.jfif");
+    background-size: cover;
+}
+
+#card-6 {
+    background-image:
+        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+        url("./Carrusel-6.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+
+#card-7 {
+    background-image:
+        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+        url("./Carrusel-7.jpeg");
+    background-size: cover;
+    background-position: center;
+}

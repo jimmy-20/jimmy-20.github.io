@@ -73,34 +73,75 @@
         </article>
     </section>
 
-    <section class="carrusel">
-        <article>
-            Dia que empezamos a hablar
-        </article>
-        <article>
-            Dia que hicimos nuestra primer promesa
-        </article>
-        <article>
-            Dia que tuvimos nuestra primera platica sincera
-        </article>
-        <article>
-            Dia que dedique mi primera carta a ti
-        </article>
-        <article>
-            Dia que empezamos a jugar minecraft
-        </article>
-        <article>
-            Dia que empezamos a jugar Terraria
-        </article>
-    </section>
+<section class="carrusel">
 
-    <section>
-        Linea de tiempo de promesas que hemos hecho
-    </section>
+  <article class="card" id="card-1">
+    <div class="card-title">16 de Noviembre 2025</div>
+    <div class="card-content">
+      Este fue el día que empezamos a hablar...
+      Y sin saberlo, comenzó algo muy especial.
+    </div>
+  </article>
 
-    <footer class="footer">
-        Pie de pagina
-    </footer>
+  <article class="card" id="card-2">
+    <div class="card-title">26 y 27 de Noviembre 2025</div>
+    <div class="card-content">
+      Nuestra primera promesa.
+      Fue pequeña, pero significativa.
+
+      Nos prometimos nunca abandonaros y estar 
+      alli para el otro
+    </div>
+  </article>
+
+  <article class="card" id="card-3">
+    <div class="card-title">30 de Noviembre 2025</div>
+    <div class="card-content">
+      El dia que prometistes que nos esperemos 
+      1 año para conocernos más y profundizar
+      quienes somos para el otro
+    </div>
+  </article>
+
+  <article class="card" id="card-4">
+    <div class="card-title">6 de Diciembre 2025</div>
+    <div class="card-content">
+      Primer dia que empezamos a jugar juntos comenzando con Terraria y Minecraft
+    </div>
+  </article>
+
+  <article class="card" id="card-5">
+    <div class="card-title">7 de Diciembre 2025</div>
+    <div class="card-content">
+      Dia que hablamos sobre la idea de casarnos
+      y nunca abandonarnos uno al otro
+    </div>
+  </article>
+
+  <article class="card" id="card-6">
+    <div class="card-title">23 de Diciembre 2025</div>
+    <div class="card-content">
+      Primera carte que te hice con el dibujo de un corazón, que parece mango 
+      segun tus palabras jajaja
+    </div>
+  </article>
+
+  <article class="card" id="card-7">
+    <div class="card-title">13 de Febrero 2025</div>
+    <div class="card-content">
+      Dia que te comprastes tu primera laptop
+      gracias a tus esfuerzos, paciencia, perseverancia y tu dedicación
+    </div>
+  </article>
+</section>
+
+<footer>
+  <h3>Te amo con todo mi corazón <hr>
+    Feliz 14 de Febrero ❤
+
+  </h3>
+  <div class="marcador"></div>
+</footer>
 
 <script>
     let fondoInicial = document.getElementById("bgPrincipal");
@@ -116,6 +157,23 @@
             flag = false;
         }
     });
+
+    const cards = document.querySelectorAll('.card');
+
+  cards.forEach(card => {
+    card.addEventListener('click', () => {
+
+      // Cierra todas las demás
+      cards.forEach(c => {
+        if (c !== card) {
+          c.classList.remove('active');
+        }
+      });
+
+      // Alterna la actual
+      card.classList.toggle('active');
+    });
+  });
 </script>
 
 </body>
