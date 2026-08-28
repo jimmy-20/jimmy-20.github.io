@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta de disculpas</title>
+    <link rel="stylesheet" href="Disculpas/style.css">
+</head>
+<body>
+    <div class="bg-blur one"></div>
+    <div class="bg-blur two"></div>
+
+    <main class="container">
+        <div class="eyebrow">Carta de disculpas</div>
+
+        <div class="title-wrap">
+            <h1>Lamento todo el daño directo e indirecto que te he hecho...</h1>
+        </div>
+
+        <section class="message">
+            <p>Buenos dìas/tardes/noches, no se en que momento estaras
+                leyendo este pequeño detalle que he hecho para ti, llevabas
+                hace un tiempo esperando unas disculpas de mi parte, aunque creas
+                que te he ignorado o pasado por alto, por supuesto que no es asi... pero
+                si te decia que esperaras que estaba haciendo algo para ti me dirias
+                mentiroso...asi que espere, hice las cosas bien y este fue el resultado...
+        </section>
+
+        <section class="grid" aria-label="Motivos de disculpa">
+            <article class="card">
+                <h3>La confusiòn</h3>
+                <p>Lamento mucho haberte llamado "prostituta
+                    se que me he explicado muchas veces que fue
+                    lo que ocurrio, ocasiono, nunca debi haberte
+                    llamado asi, ahora en adelante tienes esa cicatriz
+                    en el pedacito de corazon que me entregastes a mi,
+                    no debi haber pensando cosas malas de ti pero mi apuro,
+                    mi suposicion, mi sobrepensar te hizo llamarte asi, todo
+                    por un mal entendido que interprete, asi que por favor,
+                    quiero pedirte perdon aunque no seas capaz de olvidarlo.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>Insultos no merecidos</h3>
+                <p>Te mereces paciencia, cariño y un trato lleno de amor
+                    y respeto, no insultos ni palabras hirientes, lamento
+                    mucho haberte llamado imbecil, mierda, y mucho mas, 
+                    insultos que no quisiera mencionar ni recordar pero 
+                    lo sabes, ya que quedaron grabando en lo mas fondo de tu
+                    corazon, se que no mereces eso, y que no es justo que te haya hecho
+                    sentir mal, por eso quiero pedirte perdon y decirte
+                    que nunca mas volvera a ocurrir algo asi.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>Reclamos/Discusiones</h3>
+                <p>Lamento mucho no darte la prioridad que quieres, 
+                    tienes razon que cuando uno siente interes, hace
+                    todo lo que puede para estar con esa persona,
+                    pero es una arma de doble filo, 
+                    ya que cuando uno se siente agobiado, no puede dar lo mejor de si mismo, y eso es lo que me paso a mi,
+                    no supe manejar mis emociones y te hice sentir mal,
+                    por eso quiero pedirte perdon nuevamente, disculpame y lo siento
+                    mucho por no ser el chico que quieres tener en tu vida...
+                </p>
+            </article>
+        </section>
+
+        <div class="final-message" id="mensaje">
+            “No quiero convertirme en la razon de tu odio, anhelo tu amor,
+            tu cariño, to corazon y tu estima mas que nadie, aunque prometa
+            que no volveremos a discutir, lo haremos al menos una vez...pero, 
+            quiero que sepas que a pesar de esas discusiones, quiero que seas
+            firme, clara y directa con tu pensar, ya que no hay nada mas lindo
+            y tierno, que resolver nuestras diferencias juntos”
+        </div>
+
+        <div class="signature">
+            Con todo mi corazón,
+            <strong>Quiero pedirte perdon por todo el daño que a tu corazon le he hecho</strong>
+        </div>
+
+        <h3>¿Me perdonas?
+                Si te he fallado te pido perdòn de la unica forma que sè:
+                abriendo las puertas de mi corazon para cuando decidas volver. Solo
+                te pido que no te vayas ¿si?
+            </h3>
+        <div class="container-image">
+            <img src="Disculpas/Perdoname.jpg" alt="Corazon roto" class="heart-image" id="imagen">
+        </div>
+        <div class="actions">
+            <button class="button si">Si</button>
+            <button class="button no">No</button>
+        </div>
+
+        <h2 id="titulo-hide">Sabia que dirias que Si nwn</h2>
+    </main>
+<script>
+const botonSi = document.querySelector(".si");
+const botonNo = document.querySelector(".no");
+
+let escala = 1;
+
+botonNo.addEventListener("click", () => {
+    escala += 0.5;
+    botonSi.style.transform = `scale(${escala})`;
+
+    // Cuando sea suficientemente grande, ocupa toda la pantalla
+    if (escala >= 8) {
+        botonSi.style.position = "fixed";
+        botonSi.style.inset = "0";
+        botonSi.style.width = "100vw";
+        botonSi.style.height = "100vh";
+        botonSi.style.transform = "none";
+        botonSi.style.zIndex = "9999";
+        botonSi.style.fontSize = "5rem";
+    }
+});
+
+const imagen = document.querySelector("#imagen");
+
+botonSi.addEventListener("click", () => {
+    imagen.src = "/Disculpas/CapooCora.png";
+    document.getElementById("titulo-hide").style.display = "block";
+    botonSi.style.display = "none";
+    botonNo.style.display = "none";
+});
+</script>
+
+</body>
+</html>
